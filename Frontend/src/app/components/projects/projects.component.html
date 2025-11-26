@@ -1,0 +1,50 @@
+<section class="projects py-6" id="projects">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">চলমান কার্যক্রমসমূহ</h2>
+            <p class="section-subtitle">
+                আমাদের বিভিন্ন প্রকল্পের মাধ্যমে সমাজে ইতিবাচক পরিবর্তন আনছি
+            </p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" *ngFor="let project of projects">
+                <div class="project-image">
+                    <div class="image-overlay"></div>
+                    <div class="project-icon" [innerHTML]="project.icon"></div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <p class="project-description">{{ project.description }}</p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <span>{{ project.beneficiaries }}</span>
+                        </div>
+                        <div class="meta-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>{{ project.location }}</span>
+                        </div>
+                    </div>
+                    <a href="#donate" class="project-link">
+                        বিস্তারিত দেখুন
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

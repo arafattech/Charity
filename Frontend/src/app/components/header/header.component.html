@@ -1,0 +1,33 @@
+<header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/">
+                    <span class="logo-text">আস-সুন্নাহ ফাউন্ডেশন</span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="nav-menu" [class.active]="isMenuOpen">
+                <li><a href="#home" (click)="closeMenu()">হোম</a></li>
+                <li><a href="#about" (click)="closeMenu()">আমাদের সম্পর্কে</a></li>
+                <li><a href="#projects" (click)="closeMenu()">প্রকল্পসমূহ</a></li>
+                <li><a href="#donations" (click)="closeMenu()">দান করুন</a></li>
+                <li><a href="#contact" (click)="closeMenu()">যোগাযোগ</a></li>
+            </ul>
+
+            <!-- CTA Button -->
+            <div class="nav-cta">
+                <a href="#donate" class="btn btn-primary">দান করুন</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </div>
+</header>

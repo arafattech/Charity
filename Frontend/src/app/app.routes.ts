@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from './pages/about/about.component';
+import { BlogComponent } from './pages/blog/blog.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { GetInvolvedComponent } from './pages/get-involved/get-involved.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -10,6 +11,7 @@ export const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'get-involved', component: GetInvolvedComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'blog', component: BlogComponent },
   { path: '**', redirectTo: '' }
 ];
 

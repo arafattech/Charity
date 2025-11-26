@@ -3,15 +3,15 @@
         <nav class="navbar">
             <!-- Logo -->
             <div class="logo">
-                <a href="/">
+                <a routerLink="/">
                     <span class="logo-text">আস-সুন্নাহ ফাউন্ডেশন</span>
                 </a>
             </div>
 
             <!-- Desktop Navigation -->
             <ul class="nav-menu" [class.active]="isMenuOpen">
-                <li><a href="#home" (click)="closeMenu()">হোম</a></li>
-                <li><a href="#about" (click)="closeMenu()">আমাদের সম্পর্কে</a></li>
+                <li><a routerLink="/home" (click)="closeMenu()">হোম</a></li>
+                <li><a routerLink="/about" (click)="closeMenu()">আমাদের সম্পর্কে</a></li>
                 <li><a href="#projects" (click)="closeMenu()">প্রকল্পসমূহ</a></li>
                 <li><a href="#donations" (click)="closeMenu()">দান করুন</a></li>
                 <li><a href="#contact" (click)="closeMenu()">যোগাযোগ</a></li>

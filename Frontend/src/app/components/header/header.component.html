@@ -20,9 +20,20 @@
                 <li><a routerLink="/contact" (click)="closeMenu()">যোগাযোগ</a></li>
             </ul>
 
-            <!-- CTA Button -->
-            <div class="nav-cta">
-                <a routerLink="/donate" class="btn btn-primary">দান করুন</a>
+            <!-- CTA Button & Actions -->
+            <div class="nav-actions">
+                <div class="lang-toggle">
+                    <button class="active">বাং</button>
+                    <button>EN</button>
+                </div>
+
+                <a routerLink="/auth/signin" class="user-btn">
+                    <i class="far fa-user"></i>
+                </a>
+
+                <div class="nav-cta">
+                    <a routerLink="/donate" class="btn btn-primary">দান করুন</a>
+                </div>
             </div>
 
             <!-- Mobile Menu Toggle -->

@@ -50,21 +50,25 @@
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.2rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-shrink: 1;
+  white-space: nowrap;
 
   li {
     position: relative;
+    flex-shrink: 0;
 
     a {
       color: var(--text-primary);
       font-weight: 500;
-      font-size: 1rem;
+      font-size: 0.9rem;
       padding: 0.5rem 0;
       transition: color var(--transition-base);
       position: relative;
+      white-space: nowrap;
 
       &::after {
         content: '';

@@ -6,6 +6,7 @@ import { DonateComponent } from './pages/donate/donate.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { GetInvolvedComponent } from './pages/get-involved/get-involved.component';
 import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,6 +17,8 @@ export const routes: Routes = [
   { path: 'blog', component: BlogComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'donate', component: DonateComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'auth/signin', component: LoginComponent },
   { path: '**', redirectTo: '' }
 ];
 

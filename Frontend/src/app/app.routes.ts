@@ -7,6 +7,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { GetInvolvedComponent } from './pages/get-involved/get-involved.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
+import { NoticeComponent } from './pages/notice/notice.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +20,7 @@ export const routes: Routes = [
   { path: 'donate', component: DonateComponent },
   { path: 'login', component: LoginComponent },
   { path: 'auth/signin', component: LoginComponent },
+  { path: 'notice', component: NoticeComponent },
   { path: '**', redirectTo: '' }
 ];
 

@@ -88,6 +88,15 @@
           width: 100%;
         }
       }
+
+      &.active-link {
+        color: var(--primary-green);
+        font-weight: 600;
+
+        &::after {
+          width: 100%;
+        }
+      }
     }
   }
 }

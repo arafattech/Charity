@@ -10,15 +10,16 @@
 
             <!-- Desktop Navigation -->
             <ul class="nav-menu" [class.active]="isMenuOpen">
-                <li><a routerLink="/home" (click)="closeMenu()">হোম</a></li>
-                <li><a routerLink="/about" (click)="closeMenu()">আমাদের সম্পর্কে</a></li>
-                <li><a routerLink="/get-involved" (click)="closeMenu()">আমাদের সাথে যুক্ত হোন</a></li>
+                <li><a routerLink="/home" routerLinkActive="active-link" (click)="closeMenu()">হোম</a></li>
+                <li><a routerLink="/about" routerLinkActive="active-link" (click)="closeMenu()">আমাদের সম্পর্কে</a></li>
+                <li><a routerLink="/get-involved" routerLinkActive="active-link" (click)="closeMenu()">আমাদের সাথে যুক্ত
+                        হোন</a></li>
                 <li><a href="#projects" (click)="closeMenu()">প্রকল্পসমূহ</a></li>
-                <li><a routerLink="/donate" (click)="closeMenu()">দান করুন</a></li>
-                <li><a routerLink="/gallery" (click)="closeMenu()">গ্যালারি</a></li>
-                <li><a routerLink="/blog" (click)="closeMenu()">ব্লগ</a></li>
-                <li><a routerLink="/notice" (click)="closeMenu()">নোটিশ</a></li>
-                <li><a routerLink="/contact" (click)="closeMenu()">যোগাযোগ</a></li>
+                <li><a routerLink="/donate" routerLinkActive="active-link" (click)="closeMenu()">দান করুন</a></li>
+                <li><a routerLink="/gallery" routerLinkActive="active-link" (click)="closeMenu()">গ্যালারি</a></li>
+                <li><a routerLink="/blog" routerLinkActive="active-link" (click)="closeMenu()">ব্লগ</a></li>
+                <li><a routerLink="/notice" routerLinkActive="active-link" (click)="closeMenu()">নোটিশ</a></li>
+                <li><a routerLink="/contact" routerLinkActive="active-link" (click)="closeMenu()">যোগাযোগ</a></li>
             </ul>
 
             <!-- CTA Button & Actions -->

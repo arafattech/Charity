@@ -1,0 +1,202 @@
+@import '../../../styles.scss';
+
+.donate-page {
+    padding-top: 80px; // Space for fixed header
+
+    .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+    }
+
+    .donation-content {
+        padding: 80px 0;
+        background-color: #f8f9fa;
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+
+            h2 {
+                font-size: 2.5rem;
+                color: var(--primary-green);
+                margin-bottom: 1rem;
+            }
+
+            p {
+                color: var(--text-secondary);
+                font-size: 1.1rem;
+            }
+        }
+
+        .donation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .donation-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            border-top: 4px solid var(--primary-green);
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            .card-header {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 1.5rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #eee;
+
+                i {
+                    font-size: 2rem;
+                    color: var(--primary-green);
+                }
+
+                h3 {
+                    font-size: 1.5rem;
+                    color: var(--text-primary);
+                    margin: 0;
+                }
+            }
+
+            .account-details {
+                .detail-row {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 1rem;
+                    font-size: 1rem;
+
+                    .label {
+                        color: var(--text-secondary);
+                        font-weight: 500;
+                    }
+
+                    .value {
+                        color: var(--text-primary);
+                        font-weight: 600;
+                        text-align: right;
+                    }
+                }
+            }
+
+            .copy-btn {
+                width: 100%;
+                padding: 0.8rem;
+                background-color: var(--primary-green-lighter);
+                color: var(--primary-green);
+                border: none;
+                border-radius: 6px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin-top: 1rem;
+
+                &:hover {
+                    background-color: var(--primary-green);
+                    color: white;
+                }
+            }
+        }
+
+        .mobile-banking {
+            margin-top: 4rem;
+
+            h3 {
+                text-align: center;
+                margin-bottom: 2rem;
+                font-size: 2rem;
+                color: var(--text-primary);
+            }
+
+            .banking-methods {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                flex-wrap: wrap;
+
+                .method-card {
+                    background: white;
+                    padding: 2rem;
+                    border-radius: 12px;
+                    text-align: center;
+                    min-width: 250px;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+                    border: 1px solid #eee;
+
+                    .icon {
+                        width: 60px;
+                        height: 60px;
+                        margin: 0 auto 1rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        font-size: 1.5rem;
+                        color: white;
+                        font-weight: bold;
+                    }
+
+                    &.bkash .icon { background-color: #e2136e; }
+                    &.nagad .icon { background-color: #f6921e; }
+                    &.rocket .icon { background-color: #8c3494; }
+
+                    h4 {
+                        font-size: 1.2rem;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    p {
+                        font-size: 1.1rem;
+                        font-weight: 700;
+                        color: var(--text-primary);
+                        margin-bottom: 0.5rem;
+                    }
+
+                    span {
+                        font-size: 0.9rem;
+                        color: var(--text-secondary);
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .donate-page {
+        .hero-section {
+            padding: 60px 0;
+            h1 { font-size: 2rem; }
+        }
+
+        .donation-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}

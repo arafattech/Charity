@@ -8,11 +8,13 @@ import { GetInvolvedComponent } from './pages/get-involved/get-involved.componen
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NoticeComponent } from './pages/notice/notice.component';
+import { ProjectsPageComponent } from './pages/projects/projects.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'projects', component: ProjectsPageComponent },
   { path: 'get-involved', component: GetInvolvedComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'blog', component: BlogComponent },

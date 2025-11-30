@@ -1,14 +1,16 @@
-.projects {
+.projects-page {
   background: var(--bg-secondary);
+  min-height: 100vh;
+  padding-top: 2rem;
 }
 
-.section-header {
+.page-header {
   max-width: 700px;
   margin: 0 auto 3rem;
 }
 
-.section-title {
-  font-size: clamp(2rem, 4vw, 2.75rem);
+.page-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 800;
   margin-bottom: 1rem;
   background: linear-gradient(135deg, var(--primary-green-dark), var(--primary-green));
@@ -17,63 +19,16 @@
   background-clip: text;
 }
 
-.section-subtitle {
-  font-size: 1.125rem;
+.page-subtitle {
+  font-size: 1.25rem;
   color: var(--text-secondary);
   line-height: 1.7;
-}
-
-.carousel-wrapper {
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--bg-primary);
-  border: 2px solid var(--primary-green);
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all var(--transition-base);
-  z-index: 10;
-  box-shadow: var(--shadow-md);
-
-  svg {
-    color: var(--primary-green);
-    transition: transform var(--transition-base);
-  }
-
-  &:hover {
-    background: var(--primary-green);
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: var(--shadow-lg);
-
-    svg {
-      color: var(--text-white);
-    }
-  }
-
-  &.prev-btn {
-    left: -24px;
-  }
-
-  &.next-btn {
-    right: -24px;
-  }
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 2rem;
-  transition: all 0.5s ease-in-out;
 }
 
 .project-card {
@@ -91,11 +46,11 @@
 
     .project-image {
       .image-overlay {
-        opacity: 0.6;
+        opacity: 0.15;
       }
 
       img {
-        transform: scale(1.05);
+        transform: scale(1.08);
       }
     }
 
@@ -109,7 +64,7 @@
 .project-image {
   position: relative;
   height: 200px;
-  background: linear-gradient(135deg, var(--primary-green), var(--primary-green-light));
+  background: var(--gray-100);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,8 +83,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(45, 122, 62, 0.8), rgba(58, 153, 80, 0.6));
-    opacity: 0.25;
+    background: linear-gradient(135deg, rgba(20, 83, 45, 0.65), rgba(16, 185, 129, 0.35));
+    opacity: 0.35;
     transition: opacity var(--transition-base);
   }
 }
@@ -201,116 +156,17 @@
   }
 }
 
-.carousel-indicators {
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-top: 2rem;
-}
-
-.indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--gray-300);
-  border: none;
-  cursor: pointer;
-  transition: all var(--transition-base);
-  padding: 0;
-
-  &:hover {
-    background: var(--primary-green-light);
-    transform: scale(1.2);
-  }
-
-  &.active {
-    background: var(--primary-green);
-    width: 32px;
-    border-radius: 6px;
-  }
-}
-
-.view-all-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem;
-}
-
-.view-all-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 2.5rem;
-  background: var(--primary-green);
-  color: var(--text-white);
-  border: none;
-  border-radius: var(--radius-lg);
-  font-size: 1.125rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all var(--transition-base);
-  box-shadow: var(--shadow-md);
-
-  svg {
-    width: 20px;
-    height: 20px;
-    transition: transform var(--transition-base);
-  }
-
-  &:hover {
-    background: var(--primary-green-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-
-    svg {
-      transform: translateX(4px);
-    }
-  }
-
-  &:active {
-    transform: translateY(0);
-  }
-}
-
 /* Responsive Design */
 @media (max-width: 1024px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
-
-  .carousel-btn {
-    &.prev-btn {
-      left: -16px;
-    }
-
-    &.next-btn {
-      right: -16px;
-    }
-  }
 }
 
 @media (max-width: 768px) {
-  .section-header {
+  .page-header {
     margin-bottom: 2rem;
-  }
-
-  .carousel-btn {
-    width: 40px;
-    height: 40px;
-
-    &.prev-btn {
-      left: -8px;
-    }
-
-    &.next-btn {
-      right: -8px;
-    }
-
-    svg {
-      width: 20px;
-      height: 20px;
-    }
   }
 
   .projects-grid {
@@ -338,10 +194,5 @@
   .project-meta {
     flex-direction: column;
     gap: 0.75rem;
-  }
-
-  .view-all-btn {
-    padding: 0.875rem 2rem;
-    font-size: 1rem;
   }
 }

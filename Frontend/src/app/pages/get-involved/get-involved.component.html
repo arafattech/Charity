@@ -13,12 +13,8 @@
             <div class="section-content">
                 <div class="section-info">
                     <div class="icon-wrapper">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path
-                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                            </path>
-                        </svg>
+                        <img src="https://cdn-icons-png.flaticon.com/512/3206/3206743.png" alt="নিয়মিত দাতার আইকন"
+                            loading="lazy" />
                     </div>
                     <h2>নিয়মিত দাতা সদস্য</h2>
                     <p>
@@ -34,12 +30,9 @@
                     <button class="btn btn-primary">নিয়মিত দাতা হন</button>
                 </div>
                 <div class="section-image">
-                    <div class="image-placeholder">
-                        <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <circle cx="12" cy="8" r="7"></circle>
-                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                        </svg>
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
+                            alt="নিয়মিত দাতাদের ছবি" loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -51,21 +44,15 @@
         <div class="container">
             <div class="section-content reverse">
                 <div class="section-image">
-                    <div class="image-placeholder">
-                        <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                        </svg>
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80"
+                            alt="আজীবন দাতাদের ছবি" loading="lazy" />
                     </div>
                 </div>
                 <div class="section-info">
                     <div class="icon-wrapper">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
+                        <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="আজীবন দাতার আইকন"
+                            loading="lazy" />
                     </div>
                     <h2>আজীবন দাতা সদস্য</h2>
                     <p>
@@ -90,13 +77,8 @@
             <div class="section-content">
                 <div class="section-info">
                     <div class="icon-wrapper">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
+                        <img src="https://cdn-icons-png.flaticon.com/512/3448/3448610.png" alt="স্বেচ্ছাসেবকের আইকন"
+                            loading="lazy" />
                     </div>
                     <h2>স্বেচ্ছাসেবক</h2>
                     <p>
@@ -107,7 +89,9 @@
                         <h3>যেসব ক্ষেত্রে কাজ করতে পারবেন:</h3>
                         <div class="areas-grid">
                             <div class="area-item" *ngFor="let area of volunteerAreas">
-                                <div class="area-icon" [innerHTML]="area.icon"></div>
+                                <div class="area-icon">
+                                    <img [src]="area.icon" [alt]="area.name" loading="lazy" />
+                                </div>
                                 <span>{{ area.name }}</span>
                             </div>
                         </div>
@@ -115,14 +99,9 @@
                     <button class="btn btn-primary">স্বেচ্ছাসেবক হিসেবে যুক্ত হন</button>
                 </div>
                 <div class="section-image">
-                    <div class="image-placeholder">
-                        <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80"
+                            alt="স্বেচ্ছাসেবকদের দল" loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -134,21 +113,15 @@
         <div class="container">
             <div class="section-content reverse">
                 <div class="section-image">
-                    <div class="image-placeholder">
-                        <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                        </svg>
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
+                            alt="ক্যারিয়ার আলোচনা" loading="lazy" />
                     </div>
                 </div>
                 <div class="section-info">
                     <div class="icon-wrapper">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                        </svg>
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135673.png" alt="ক্যারিয়ার আইকন"
+                            loading="lazy" />
                     </div>
                     <h2>ক্যারিয়ার</h2>
                     <p>

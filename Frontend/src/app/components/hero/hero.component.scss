@@ -27,7 +27,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(45, 122, 62, 0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  background: url('/assets/hero/herobg.png') center center / cover no-repeat;
   opacity: 0.5;
   pointer-events: none;
 }
@@ -50,7 +50,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--primary-green-dark), var(--primary-green));
+  background: linear-gradient(135deg, #1a4ed8, #3b82f6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -101,6 +101,15 @@
     transform: scale(1.05) rotate(2deg);
   }
 
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -119,18 +128,34 @@
 }
 
 .image-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  display: none;
+}
 
-  svg {
-    width: 120px;
-    height: 120px;
-    color: rgba(255, 255, 255, 0.8);
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+.image-badge {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  z-index: 2;
+
+  .badge-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-green-dark);
+    line-height: 1;
+  }
+
+  .badge-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
   }
 }
 
@@ -189,6 +214,16 @@
 
   .image-card {
     max-width: 350px;
+  }
+
+  .image-badge {
+    right: 16px;
+    bottom: 16px;
+    padding: 0.75rem 1.25rem;
+
+    .badge-title {
+      font-size: 1.5rem;
+    }
   }
 }
 

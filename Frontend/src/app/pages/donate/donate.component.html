@@ -1,136 +1,155 @@
-<div class="donate-page">
+<div class="pt-20 donate-page">
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <h1>দান করুন</h1>
-            <p>আপনার দান আর্তমানবতার সেবায় পৌঁছে যাবে ইনশাআল্লাহ</p>
+    <section
+        class="py-24 text-center text-white bg-center bg-cover hero-section bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')]">
+        <div class="container mx-auto px-4">
+            <h1 class="mb-4 text-3xl font-bold md:text-5xl">দান করুন</h1>
+            <p class="max-w-xl mx-auto text-xl opacity-90">আপনার দান আর্তমানবতার সেবায় পৌঁছে যাবে ইনশাআল্লাহ</p>
         </div>
     </section>
 
     <!-- Donation Content -->
-    <section class="donation-content">
-        <div class="container">
-            <div class="section-title">
-                <h2>ব্যাংক একাউন্ট তথ্য</h2>
-                <p>যেকোনো ব্যাংকের মাধ্যমে সরাসরি দান পাঠাতে পারেন</p>
+    <section class="py-20 donation-content bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="mb-12 text-center section-title">
+                <h2 class="mb-4 text-3xl font-bold md:text-4xl text-primary-green">ব্যাংক একাউন্ট তথ্য</h2>
+                <p class="text-lg text-gray-600">যেকোনো ব্যাংকের মাধ্যমে সরাসরি দান পাঠাতে পারেন</p>
             </div>
 
-            <div class="donation-grid">
+            <div class="grid grid-cols-1 gap-8 mb-16 md:grid-cols-2 lg:grid-cols-3 donation-grid">
                 <!-- General Fund -->
-                <div class="donation-card">
-                    <div class="card-header">
-                        <i class="fas fa-hand-holding-heart"></i>
-                        <h3>সাধারণ তহবিল (General Fund)</h3>
+                <div
+                    class="p-8 transition-transform duration-300 bg-white border-t-4 shadow-sm donation-card rounded-xl border-primary-green hover:-translate-y-1">
+                    <div class="flex items-center gap-4 pb-4 mb-6 border-b border-gray-100 card-header">
+                        <i class="text-3xl fas fa-hand-holding-heart text-primary-green"></i>
+                        <h3 class="m-0 text-2xl font-bold text-gray-800">সাধারণ তহবিল (General Fund)</h3>
                     </div>
                     <div class="account-details">
-                        <div class="detail-row">
-                            <span class="label">ব্যাংকের নাম:</span>
-                            <span class="value">ইসলামী ব্যাংক বাংলাদেশ লিঃ</span>
+                        <div class="flex justify-between mb-4 text-base detail-row">
+                            <span class="font-medium text-gray-600 label">ব্যাংকের নাম:</span>
+                            <span class="font-semibold text-right text-gray-800 value">ইসলামী ব্যাংক বাংলাদেশ লিঃ</span>
                         </div>
-                        <div class="detail-row">
-                            <span class="label">হিসাবের নাম:</span>
-                            <span class="value">As-Sunnah Foundation</span>
+                        <div class="flex justify-between mb-4 text-base detail-row">
+                            <span class="font-medium text-gray-600 label">হিসাবের নাম:</span>
+                            <span class="font-semibold text-right text-gray-800 value">As-Sunnah Foundation</span>
                         </div>
-                        <div class="detail-row">
-                            <span class="label">হিসাব নম্বর:</span>
-                            <span class="value">20507770100326100</span>
+                        <div class="flex justify-between mb-4 text-base detail-row">
+                            <span class="font-medium text-gray-600 label">হিসাব নম্বর:</span>
+                            <span class="font-semibold text-right text-gray-800 value">20507770100326100</span>
                         </div>
-                        <div class="detail-row">
-                            <span class="label">শাখা:</span>
-                            <span class="value">বারিধারা শাখা</span>
+                        <div class="flex justify-between mb-4 text-base detail-row">
+                            <span class="font-medium text-gray-600 label">শাখা:</span>
+                            <span class="font-semibold text-right text-gray-800 value">বারিধারা শাখা</span>
                         </div>
-                        <div class="detail-row">
-                            <span class="label">রাউটিং নম্বর:</span>
-                            <span class="value">125260563</span>
+                        <div class="flex justify-between mb-4 text-base detail-row">
+                            <span class="font-medium text-gray-600 label">রাউটিং নম্বর:</span>
+                            <span class="font-semibold text-right text-gray-800 value">125260563</span>
                         </div>
                     </div>
-                    <button class="copy-btn">তথ্য কপি করুন</button>
+                    <button
+                        class="w-full p-3 mt-4 font-semibold transition-all duration-300 border-none rounded-md cursor-pointer copy-btn bg-primary-green-lighter text-primary-green hover:bg-primary-green hover:text-white">তথ্য
+                        কপি করুন</button>
                 </div>
 
                 <!-- Zakat Fund -->
-                <div class="donation-card">
-                    <div class="card-header">
-                        <i class="fas fa-praying-hands"></i>
-                        <h3>যাকাত তহবিল (Zakat Fund)</h3>
+                <div
+                    class="p-8 transition-transform duration-300 bg-white border-t-4 shadow-sm donation-card rounded-xl border-primary-green hover:-translate-y-1">
+                    <div class="flex items-center gap-4 pb-4 mb-6 border-b border-gray-100 card-header">
+                        <i class="text-3xl fas fa-praying-hands text-primary-green"></i>
+                        <h3 class="m-0 text-2xl font-bold text-gray-800">যাকাত তহবিল (Zakat Fund)</h3>
                     </div>
                     <div class="account-details">
-                        <div class="detail-row">
-                            <span class="label">ব্যাংকের নাম:</span>
-                            <span class="value">ইসলামী ব্যাংক বাংলাদেশ লিঃ</span>
+                        <div class="flex justify-between mb-4 text-base detail-row">
+                            <span class="font-medium text-gray-600 label">ব্যাংকের নাম:</span>
+                            <span class="font-semibold text-right text-gray-800 value">ইসলামী ব্যাংক বাংলাদেশ লিঃ</span>
                         </div>
-                        <div class="detail-row">
-                            <span class="label">হিসাবের নাম:</span>
-                            <span class="value">As-Sunnah Foundation</span>
+                        <div class="flex justify-between mb-4 text-base detail-row">
+                            <span class="font-medium text-gray-600 label">হিসাবের নাম:</span>
+                            <span class="font-semibold text-right text-gray-800 value">As-Sunnah Foundation</span>
                         </div>
-                        <div class="detail-row">
-                            <span class="label">হিসাব নম্বর:</span>
-                            <span class="value">20507770100326200</span>
+                        <div class="flex justify-between mb-4 text-base detail-row">
+                            <span class="font-medium text-gray-600 label">হিসাব নম্বর:</span>
+                            <span class="font-semibold text-right text-gray-800 value">20507770100326200</span>
                         </div>
-                        <div class="detail-row">
-                            <span class="label">শাখা:</span>
-                            <span class="value">বারিধারা শাখা</span>
+                        <div class="flex justify-between mb-4 text-base detail-row">
+                            <span class="font-medium text-gray-600 label">শাখা:</span>
+                            <span class="font-semibold text-right text-gray-800 value">বারিধারা শাখা</span>
                         </div>
-                        <div class="detail-row">
-                            <span class="label">রাউটিং নম্বর:</span>
-                            <span class="value">125260563</span>
+                        <div class="flex justify-between mb-4 text-base detail-row">
+                            <span class="font-medium text-gray-600 label">রাউটিং নম্বর:</span>
+                            <span class="font-semibold text-right text-gray-800 value">125260563</span>
                         </div>
                     </div>
-                    <button class="copy-btn">তথ্য কপি করুন</button>
+                    <button
+                        class="w-full p-3 mt-4 font-semibold transition-all duration-300 border-none rounded-md cursor-pointer copy-btn bg-primary-green-lighter text-primary-green hover:bg-primary-green hover:text-white">তথ্য
+                        কপি করুন</button>
                 </div>
 
                 <!-- Construction Fund -->
-                <div class="donation-card">
-                    <div class="card-header">
-                        <i class="fas fa-mosque"></i>
-                        <h3>নির্মাণ তহবিল (Construction Fund)</h3>
+                <div
+                    class="p-8 transition-transform duration-300 bg-white border-t-4 shadow-sm donation-card rounded-xl border-primary-green hover:-translate-y-1">
+                    <div class="flex items-center gap-4 pb-4 mb-6 border-b border-gray-100 card-header">
+                        <i class="text-3xl fas fa-mosque text-primary-green"></i>
+                        <h3 class="m-0 text-2xl font-bold text-gray-800">নির্মাণ তহবিল (Construction Fund)</h3>
                     </div>
                     <div class="account-details">
-                        <div class="detail-row">
-                            <span class="label">ব্যাংকের নাম:</span>
-                            <span class="value">সোনালী ব্যাংক লিঃ</span>
+                        <div class="flex justify-between mb-4 text-base detail-row">
+                            <span class="font-medium text-gray-600 label">ব্যাংকের নাম:</span>
+                            <span class="font-semibold text-right text-gray-800 value">সোনালী ব্যাংক লিঃ</span>
                         </div>
-                        <div class="detail-row">
-                            <span class="label">হিসাবের নাম:</span>
-                            <span class="value">As-Sunnah Foundation</span>
+                        <div class="flex justify-between mb-4 text-base detail-row">
+                            <span class="font-medium text-gray-600 label">হিসাবের নাম:</span>
+                            <span class="font-semibold text-right text-gray-800 value">As-Sunnah Foundation</span>
                         </div>
-                        <div class="detail-row">
-                            <span class="label">হিসাব নম্বর:</span>
-                            <span class="value">0102345678901</span>
+                        <div class="flex justify-between mb-4 text-base detail-row">
+                            <span class="font-medium text-gray-600 label">হিসাব নম্বর:</span>
+                            <span class="font-semibold text-right text-gray-800 value">0102345678901</span>
                         </div>
-                        <div class="detail-row">
-                            <span class="label">শাখা:</span>
-                            <span class="value">গুলশান শাখা</span>
+                        <div class="flex justify-between mb-4 text-base detail-row">
+                            <span class="font-medium text-gray-600 label">শাখা:</span>
+                            <span class="font-semibold text-right text-gray-800 value">গুলশান শাখা</span>
                         </div>
-                        <div class="detail-row">
-                            <span class="label">রাউটিং নম্বর:</span>
-                            <span class="value">200260123</span>
+                        <div class="flex justify-between mb-4 text-base detail-row">
+                            <span class="font-medium text-gray-600 label">রাউটিং নম্বর:</span>
+                            <span class="font-semibold text-right text-gray-800 value">200260123</span>
                         </div>
                     </div>
-                    <button class="copy-btn">তথ্য কপি করুন</button>
+                    <button
+                        class="w-full p-3 mt-4 font-semibold transition-all duration-300 border-none rounded-md cursor-pointer copy-btn bg-primary-green-lighter text-primary-green hover:bg-primary-green hover:text-white">তথ্য
+                        কপি করুন</button>
                 </div>
             </div>
 
             <!-- Mobile Banking -->
-            <div class="mobile-banking">
-                <h3>মোবাইল ব্যাংকিং</h3>
-                <div class="banking-methods">
-                    <div class="method-card bkash">
-                        <div class="icon">ব</div>
-                        <h4>বিকাশ (মার্চেন্ট)</h4>
-                        <p>017xxxxxxxx</p>
-                        <span>পেমেন্ট অপশন ব্যবহার করুন</span>
+            <div class="mt-16 mobile-banking">
+                <h3 class="mb-8 text-3xl font-bold text-center text-gray-800">মোবাইল ব্যাংকিং</h3>
+                <div class="flex flex-wrap justify-center gap-8 banking-methods">
+                    <div
+                        class="p-8 text-center bg-white border border-gray-100 shadow-sm method-card bkash rounded-xl min-w-[250px]">
+                        <div
+                            class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-2xl font-bold text-white rounded-full icon bg-[#e2136e]">
+                            ব</div>
+                        <h4 class="mb-2 text-xl font-semibold">বিকাশ (মার্চেন্ট)</h4>
+                        <p class="mb-2 text-lg font-bold text-gray-800">017xxxxxxxx</p>
+                        <span class="block text-sm text-gray-600">পেমেন্ট অপশন ব্যবহার করুন</span>
                     </div>
-                    <div class="method-card nagad">
-                        <div class="icon">ন</div>
-                        <h4>নগদ (মার্চেন্ট)</h4>
-                        <p>017xxxxxxxx</p>
-                        <span>পেমেন্ট অপশন ব্যবহার করুন</span>
+                    <div
+                        class="p-8 text-center bg-white border border-gray-100 shadow-sm method-card nagad rounded-xl min-w-[250px]">
+                        <div
+                            class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-2xl font-bold text-white rounded-full icon bg-[#f6921e]">
+                            ন</div>
+                        <h4 class="mb-2 text-xl font-semibold">নগদ (মার্চেন্ট)</h4>
+                        <p class="mb-2 text-lg font-bold text-gray-800">017xxxxxxxx</p>
+                        <span class="block text-sm text-gray-600">পেমেন্ট অপশন ব্যবহার করুন</span>
                     </div>
-                    <div class="method-card rocket">
-                        <div class="icon">র</div>
-                        <h4>রকেট (মার্চেন্ট)</h4>
-                        <p>017xxxxxxxx</p>
-                        <span>পেমেন্ট অপশন ব্যবহার করুন</span>
+                    <div
+                        class="p-8 text-center bg-white border border-gray-100 shadow-sm method-card rocket rounded-xl min-w-[250px]">
+                        <div
+                            class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-2xl font-bold text-white rounded-full icon bg-[#8c3494]">
+                            র</div>
+                        <h4 class="mb-2 text-xl font-semibold">রকেট (মার্চেন্ট)</h4>
+                        <p class="mb-2 text-lg font-bold text-gray-800">017xxxxxxxx</p>
+                        <span class="block text-sm text-gray-600">পেমেন্ট অপশন ব্যবহার করুন</span>
                     </div>
                 </div>
             </div>

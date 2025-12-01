@@ -1,34 +1,41 @@
-<section class="projects py-6" id="projects">
-    <div class="container">
-        <div class="section-header text-center">
-            <h2 class="section-title">চলমান কার্যক্রমসমূহ</h2>
-            <p class="section-subtitle">
+<section class="py-16 bg-gray-50 projects" id="projects">
+    <div class="container mx-auto px-4">
+        <div class="mb-12 text-center section-header">
+            <h2 class="mb-4 text-3xl font-bold md:text-4xl text-primary-green section-title">চলমান কার্যক্রমসমূহ</h2>
+            <p class="max-w-2xl mx-auto text-lg text-gray-600 section-subtitle">
                 আমাদের বিভিন্ন প্রকল্পের মাধ্যমে সমাজে ইতিবাচক পরিবর্তন আনছি
             </p>
         </div>
 
-        <div class="carousel-wrapper">
+        <div class="relative carousel-wrapper">
             <!-- Previous Button -->
-            <button class="carousel-btn prev-btn" (click)="prevSlide()" aria-label="Previous">
+            <button
+                class="absolute left-0 z-10 flex items-center justify-center w-12 h-12 text-white transition-all -translate-y-1/2 rounded-full shadow-lg top-1/2 bg-primary-green hover:bg-primary-green-dark carousel-btn prev-btn"
+                (click)="prevSlide()" aria-label="Previous">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M15 18l-6-6 6-6"></path>
                 </svg>
             </button>
 
             <!-- Projects Grid -->
-            <div class="projects-grid">
-                <div class="project-card" *ngFor="let project of projects">
-                    <div class="project-image">
-                        <img [src]="project.image" [alt]="project.title + ' এর ছবি'" loading="lazy" />
-                        <div class="image-overlay"></div>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 projects-grid">
+                <div class="overflow-hidden transition-all bg-white shadow-md rounded-xl hover:shadow-xl hover:-translate-y-1 project-card group"
+                    *ngFor="let project of projects">
+                    <div class="relative overflow-hidden project-image aspect-[4/3]">
+                        <img [src]="project.image" [alt]="project.title + ' এর ছবি'" loading="lazy"
+                            class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 transition-opacity bg-black/20 group-hover:bg-black/40 image-overlay">
+                        </div>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">{{ project.title }}</h3>
-                        <p class="project-description">{{ project.description }}</p>
-                        <div class="project-meta">
-                            <div class="meta-item">
+                    <div class="p-6 project-content">
+                        <h3 class="mb-3 text-xl font-bold text-gray-800 project-title line-clamp-2">{{ project.title }}
+                        </h3>
+                        <p class="mb-4 text-gray-600 project-description line-clamp-3">{{ project.description }}</p>
+                        <div class="flex flex-wrap gap-4 mb-4 project-meta">
+                            <div class="flex items-center gap-2 text-sm text-gray-500 meta-item">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
+                                    stroke-width="2" class="text-primary-green">
                                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                     <circle cx="9" cy="7" r="4"></circle>
                                     <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -36,19 +43,20 @@
                                 </svg>
                                 <span>{{ project.beneficiaries }}</span>
                             </div>
-                            <div class="meta-item">
+                            <div class="flex items-center gap-2 text-sm text-gray-500 meta-item">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
+                                    stroke-width="2" class="text-primary-green">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                     <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
                                 <span>{{ project.location }}</span>
                             </div>
                         </div>
-                        <a href="#donate" class="project-link">
+                        <a href="#donate"
+                            class="inline-flex items-center gap-2 font-semibold transition-colors text-primary-green hover:text-primary-green-dark project-link group">
                             বিস্তারিত দেখুন
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
+                                stroke-width="2" class="transition-transform group-hover:translate-x-1">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg>
                         </a>
@@ -57,7 +65,9 @@
             </div>
 
             <!-- Next Button -->
-            <button class="carousel-btn next-btn" (click)="nextSlide()" aria-label="Next">
+            <button
+                class="absolute right-0 z-10 flex items-center justify-center w-12 h-12 text-white transition-all -translate-y-1/2 rounded-full shadow-lg top-1/2 bg-primary-green hover:bg-primary-green-dark carousel-btn next-btn"
+                (click)="nextSlide()" aria-label="Next">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M9 18l6-6-6-6"></path>
                 </svg>
@@ -65,16 +75,19 @@
         </div>
 
         <!-- Slide Indicators -->
-        <div class="carousel-indicators">
-            <button *ngFor="let indicator of slideIndicators; let i = index" class="indicator"
-                [class.active]="currentSlide === i * 3" (click)="goToSlide(i)"
+        <div class="flex justify-center gap-2 mt-8 carousel-indicators">
+            <button *ngFor="let indicator of slideIndicators; let i = index"
+                class="w-3 h-3 transition-all rounded-full indicator"
+                [ngClass]="currentSlide === i * 3 ? 'bg-primary-green w-8' : 'bg-gray-300'" (click)="goToSlide(i)"
                 [attr.aria-label]="'Go to slide ' + (i + 1)">
             </button>
         </div>
 
         <!-- View All Projects Button -->
-        <div class="view-all-wrapper">
-            <button class="view-all-btn" (click)="navigateToProjects()">
+        <div class="flex justify-center mt-12 view-all-wrapper">
+            <button
+                class="inline-flex items-center gap-2 px-8 py-3 font-semibold text-white transition-all rounded-lg shadow-md view-all-btn bg-primary-green hover:bg-primary-green-dark hover:-translate-y-0.5 hover:shadow-lg"
+                (click)="navigateToProjects()">
                 কার্যক্রমসমূহ
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7"></path>

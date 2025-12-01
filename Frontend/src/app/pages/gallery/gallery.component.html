@@ -1,51 +1,73 @@
-<div class="gallery-page">
+<div class="min-h-screen gallery-page bg-gray-50">
     <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1 class="page-title fade-in">গ্যালারি</h1>
-            <p class="page-subtitle fade-in">আমাদের কার্যক্রমের কিছু বিশেষ মুহূর্ত</p>
+    <section
+        class="relative overflow-hidden text-center page-header py-20 bg-gradient-to-br from-primary-green-dark to-primary-green">
+        <div
+            class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.1)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.05)_0%,transparent_50%)]">
+        </div>
+        <div class="container relative z-10 mx-auto px-4">
+            <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl page-title animate-fade-in">গ্যালারি</h1>
+            <p class="text-lg text-white/90 md:text-2xl page-subtitle animate-fade-in">আমাদের কার্যক্রমের কিছু বিশেষ
+                মুহূর্ত</p>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section class="gallery-section py-6">
-        <div class="container">
+    <section class="py-12 gallery-section">
+        <div class="container mx-auto px-4">
             <!-- Filter Tabs -->
-            <div class="filter-tabs fade-up">
-                <button class="filter-btn" [class.active]="activeFilter === 'all'" (click)="setFilter('all')">
+            <div class="flex flex-wrap justify-center gap-4 mb-12 filter-tabs animate-fade-up">
+                <button
+                    class="px-8 py-3 font-medium transition-all border rounded-full cursor-pointer filter-btn border-gray-200 bg-gray-50 text-gray-500 hover:border-primary-green hover:text-primary-green"
+                    [class.bg-primary-green]="activeFilter === 'all'" [class.text-white]="activeFilter === 'all'"
+                    [class.border-primary-green]="activeFilter === 'all'" (click)="setFilter('all')">
                     সব
                 </button>
-                <button class="filter-btn" [class.active]="activeFilter === 'image'" (click)="setFilter('image')">
+                <button
+                    class="px-8 py-3 font-medium transition-all border rounded-full cursor-pointer filter-btn border-gray-200 bg-gray-50 text-gray-500 hover:border-primary-green hover:text-primary-green"
+                    [class.bg-primary-green]="activeFilter === 'image'" [class.text-white]="activeFilter === 'image'"
+                    [class.border-primary-green]="activeFilter === 'image'" (click)="setFilter('image')">
                     ছবি
                 </button>
-                <button class="filter-btn" [class.active]="activeFilter === 'video'" (click)="setFilter('video')">
+                <button
+                    class="px-8 py-3 font-medium transition-all border rounded-full cursor-pointer filter-btn border-gray-200 bg-gray-50 text-gray-500 hover:border-primary-green hover:text-primary-green"
+                    [class.bg-primary-green]="activeFilter === 'video'" [class.text-white]="activeFilter === 'video'"
+                    [class.border-primary-green]="activeFilter === 'video'" (click)="setFilter('video')">
                     ভিডিও
                 </button>
             </div>
 
             <!-- Gallery Grid -->
-            <div class="gallery-grid">
-                <div class="gallery-item fade-up" *ngFor="let item of filteredItems; let i = index"
-                    [style.animation-delay]="i * 50 + 'ms'">
-                    <div class="item-content">
-                        <img [src]="item.thumbnail" [alt]="item.title">
+            <div class="grid grid-cols-1 gap-6 mb-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gallery-grid">
+                <div class="relative overflow-hidden bg-gray-100 cursor-pointer gallery-item rounded-xl aspect-square group animate-fade-up"
+                    *ngFor="let item of filteredItems; let i = index" [style.animation-delay]="i * 50 + 'ms'">
+                    <div class="relative w-full h-full item-content">
+                        <img [src]="item.thumbnail" [alt]="item.title"
+                            class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110">
 
                         <!-- Video Overlay -->
-                        <div class="video-overlay" *ngIf="item.type === 'video'">
-                            <div class="play-button">
+                        <div class="absolute inset-0 flex items-center justify-center transition-opacity pointer-events-none video-overlay bg-black/20 group-hover:opacity-0"
+                            *ngIf="item.type === 'video'">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 text-primary-green bg-white/90 rounded-full shadow-lg play-button">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="currentColor" stroke="none">
+                                    fill="currentColor" stroke="none" class="ml-0.5">
                                     <path d="M8 5v14l11-7z" />
                                 </svg>
                             </div>
                         </div>
 
                         <!-- Hover Overlay -->
-                        <div class="hover-overlay">
-                            <div class="overlay-content">
-                                <span class="category">{{ item.category }}</span>
-                                <h3>{{ item.title }}</h3>
-                                <button class="view-btn">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center p-6 text-center transition-opacity opacity-0 hover-overlay bg-black/70 backdrop-blur-sm group-hover:opacity-100">
+                            <div
+                                class="transition-transform duration-300 translate-y-5 overlay-content group-hover:translate-y-0">
+                                <span
+                                    class="inline-block mb-2 text-sm font-semibold tracking-wide uppercase category text-primary-green">{{
+                                    item.category }}</span>
+                                <h3 class="mb-4 text-xl leading-snug text-white">{{ item.title }}</h3>
+                                <button
+                                    class="inline-flex items-center gap-2 px-5 py-2 text-sm text-white transition-all border rounded-full cursor-pointer view-btn bg-white/20 border-white/40 hover:bg-primary-green hover:border-primary-green">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round">
@@ -61,8 +83,10 @@
             </div>
 
             <!-- Load More -->
-            <div class="load-more-container">
-                <button class="btn btn-outline" (click)="loadMore()">
+            <div class="flex justify-center mt-8 load-more-container">
+                <button
+                    class="flex items-center gap-2 px-8 py-3 font-semibold text-gray-800 transition-all bg-transparent border-2 border-gray-200 rounded-full btn btn-outline hover:border-primary-green hover:text-primary-green hover:bg-gray-50"
+                    (click)="loadMore()">
                     আরও দেখুন
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

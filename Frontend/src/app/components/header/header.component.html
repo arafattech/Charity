@@ -1,46 +1,81 @@
-<header class="header">
-    <div class="container">
-        <nav class="navbar">
+<header
+    class="sticky top-0 left-0 right-0 z-50 transition-all shadow-sm header bg-white/98 backdrop-blur-md hover:shadow-md">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center justify-between py-4 navbar gap-8">
             <!-- Logo -->
-            <div class="logo">
-                <a routerLink="/">
-                    <span class="logo-text">Donate App</span>
+            <div class="shrink-0 logo">
+                <a routerLink="/" class="flex items-center gap-3 no-underline">
+                    <span
+                        class="text-2xl font-bold text-transparent transition-transform bg-gradient-to-br from-primary-green-dark to-primary-green bg-clip-text logo-text hover:scale-105">Donate
+                        App</span>
                 </a>
             </div>
 
             <!-- Desktop Navigation -->
-            <ul class="nav-menu" [class.active]="isMenuOpen">
-                <li><a routerLink="/home" routerLinkActive="active-link" (click)="closeMenu()">হোম</a></li>
-                <li><a routerLink="/about" routerLinkActive="active-link" (click)="closeMenu()">আমাদের সম্পর্কে</a></li>
-                <li><a routerLink="/get-involved" routerLinkActive="active-link" (click)="closeMenu()">আমাদের সাথে যুক্ত
-                        হোন</a></li>
-                <li><a routerLink="/projects" routerLinkActive="active-link" (click)="closeMenu()">প্রকল্পসমূহ</a></li>
-                <li><a routerLink="/donate" routerLinkActive="active-link" (click)="closeMenu()">দান করুন</a></li>
-                <li><a routerLink="/gallery" routerLinkActive="active-link" (click)="closeMenu()">গ্যালারি</a></li>
-                <li><a routerLink="/blog" routerLinkActive="active-link" (click)="closeMenu()">ব্লগ</a></li>
-                <li><a routerLink="/contact" routerLinkActive="active-link" (click)="closeMenu()">যোগাযোগ</a></li>
+            <ul class="flex flex-col items-start gap-6 pt-20 px-8 fixed top-0 w-[280px] h-screen bg-white shadow-xl transition-[right] duration-300 z-50 md:static md:w-auto md:h-auto md:bg-transparent md:shadow-none md:pt-0 md:px-0 md:flex-row md:gap-5 md:items-center nav-menu"
+                [ngClass]="{'right-0': isMenuOpen, '-right-full': !isMenuOpen}">
+                <li class="relative shrink-0"><a routerLink="/home"
+                        routerLinkActive="text-primary-green-dark font-semibold after:w-full"
+                        class="relative block py-2 text-sm font-medium text-gray-800 transition-colors md:inline-block hover:text-primary-green-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-green-dark after:transition-all hover:after:w-full"
+                        (click)="closeMenu()">হোম</a></li>
+                <li class="relative shrink-0"><a routerLink="/about"
+                        routerLinkActive="text-primary-green-dark font-semibold after:w-full"
+                        class="relative block py-2 text-sm font-medium text-gray-800 transition-colors md:inline-block hover:text-primary-green-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-green-dark after:transition-all hover:after:w-full"
+                        (click)="closeMenu()">আমাদের সম্পর্কে</a></li>
+                <li class="relative shrink-0"><a routerLink="/get-involved"
+                        routerLinkActive="text-primary-green-dark font-semibold after:w-full"
+                        class="relative block py-2 text-sm font-medium text-gray-800 transition-colors md:inline-block hover:text-primary-green-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-green-dark after:transition-all hover:after:w-full"
+                        (click)="closeMenu()">আমাদের সাথে যুক্ত হোন</a></li>
+                <li class="relative shrink-0"><a routerLink="/projects"
+                        routerLinkActive="text-primary-green-dark font-semibold after:w-full"
+                        class="relative block py-2 text-sm font-medium text-gray-800 transition-colors md:inline-block hover:text-primary-green-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-green-dark after:transition-all hover:after:w-full"
+                        (click)="closeMenu()">প্রকল্পসমূহ</a></li>
+                <li class="relative shrink-0"><a routerLink="/donate"
+                        routerLinkActive="text-primary-green-dark font-semibold after:w-full"
+                        class="relative block py-2 text-sm font-medium text-gray-800 transition-colors md:inline-block hover:text-primary-green-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-green-dark after:transition-all hover:after:w-full"
+                        (click)="closeMenu()">দান করুন</a></li>
+                <li class="relative shrink-0"><a routerLink="/gallery"
+                        routerLinkActive="text-primary-green-dark font-semibold after:w-full"
+                        class="relative block py-2 text-sm font-medium text-gray-800 transition-colors md:inline-block hover:text-primary-green-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-green-dark after:transition-all hover:after:w-full"
+                        (click)="closeMenu()">গ্যালারি</a></li>
+                <li class="relative shrink-0"><a routerLink="/blog"
+                        routerLinkActive="text-primary-green-dark font-semibold after:w-full"
+                        class="relative block py-2 text-sm font-medium text-gray-800 transition-colors md:inline-block hover:text-primary-green-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-green-dark after:transition-all hover:after:w-full"
+                        (click)="closeMenu()">ব্লগ</a></li>
+                <li class="relative shrink-0"><a routerLink="/contact"
+                        routerLinkActive="text-primary-green-dark font-semibold after:w-full"
+                        class="relative block py-2 text-sm font-medium text-gray-800 transition-colors md:inline-block hover:text-primary-green-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-green-dark after:transition-all hover:after:w-full"
+                        (click)="closeMenu()">যোগাযোগ</a></li>
             </ul>
 
             <!-- CTA Button & Actions -->
-            <div class="nav-actions">
-                <div class="lang-toggle">
-                    <button class="active">বাং</button>
-                    <button>EN</button>
+            <div class="hidden gap-4 nav-actions md:flex items-center">
+                <div class="flex overflow-hidden border border-gray-200 rounded-md lang-toggle">
+                    <button class="px-3 py-2 text-sm font-semibold text-white bg-blue-600 active">বাং</button>
+                    <button class="px-3 py-2 text-sm font-semibold text-gray-500 bg-white hover:bg-gray-50">EN</button>
                 </div>
-                <a routerLink="/auth/signin" class="user-btn">
+                <a routerLink="/auth/signin"
+                    class="flex items-center justify-center w-10 h-10 text-xl text-green-900 transition-all bg-yellow-100 border border-yellow-200 rounded-lg cursor-pointer user-btn hover:bg-yellow-200">
                     <i class="fas fa-user"></i>
                 </a>
 
-                <div class="nav-cta">
-                    <a routerLink="/donate" class="btn btn-primary">দান করুন</a>
+                <div class="shrink-0 nav-cta">
+                    <a routerLink="/donate"
+                        class="px-5 py-2.5 text-base font-semibold text-white transition-all rounded-lg shadow-md bg-gradient-to-br from-primary-green-dark to-primary-green hover:from-blue-800 hover:to-blue-700 hover:-translate-y-0.5 hover:shadow-lg">দান
+                        করুন</a>
                 </div>
             </div>
 
             <!-- Mobile Menu Toggle -->
-            <button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button
+                class="flex flex-col justify-between w-8 h-5 p-0 bg-transparent border-none cursor-pointer menu-toggle md:hidden z-[51] group"
+                (click)="toggleMenu()" [class.active]="isMenuOpen">
+                <span
+                    class="block w-full h-0.5 bg-primary-green rounded-full transition-all duration-300 origin-center group-[.active]:rotate-45 group-[.active]:translate-y-[9px]"></span>
+                <span
+                    class="block w-full h-0.5 bg-primary-green rounded-full transition-all duration-300 origin-center group-[.active]:opacity-0 group-[.active]:-translate-x-5"></span>
+                <span
+                    class="block w-full h-0.5 bg-primary-green rounded-full transition-all duration-300 origin-center group-[.active]:-rotate-45 group-[.active]:-translate-y-[9px]"></span>
             </button>
         </nav>
     </div>

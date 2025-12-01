@@ -1,30 +1,38 @@
-<div class="about-page">
+<div class="min-h-screen bg-gradient-to-b from-gray-50 to-white">
     <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1 class="page-title fade-in">আমাদের সম্পর্কে</h1>
-            <p class="page-subtitle fade-in">উম্মাহর স্বার্থে, সুন্নাহর সাথে</p>
+    <section class="relative bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-20">
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-center mb-4 animate-fade-in">আমাদের সম্পর্কে</h1>
+            <p class="text-xl text-center text-white/90 animate-fade-in">উম্মাহর স্বার্থে, সুন্নাহর সাথে</p>
         </div>
     </section>
+
     <!-- Introduction Section -->
-    <section class="intro-section py-6">
-        <div class="container">
-            <div class="intro-content">
-                <div class="intro-text">
-                    <h2 class="section-title">আস-সুন্নাহ ফাউন্ডেশন</h2>
-                    <p>
+    <section class="py-16 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">আস-সুন্নাহ ফাউন্ডেশন</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
                         আস-সুন্নাহ ফাউন্ডেশন একটি ইসলামিক দাওয়াহ ও সমাজসেবামূলক সংস্থা। আমরা কুরআন ও সুন্নাহর আলোকে
                         সমাজে ইতিবাচক পরিবর্তন আনতে এবং মানুষকে সঠিক ইসলামের পথে পরিচালিত করতে প্রতিশ্রুতিবদ্ধ।
                     </p>
-                    <p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
                         আমাদের লক্ষ্য হলো ইসলামের সঠিক শিক্ষা প্রচার করা, দরিদ্র ও অসহায় মানুষদের সাহায্য করা এবং সমাজে
                         ন্যায়বিচার ও শান্তি প্রতিষ্ঠা করা। আমরা বিশ্বাস করি যে, কুরআন ও সুন্নাহর অনুসরণের মাধ্যমেই একটি
                         সুন্দর ও সমৃদ্ধ সমাজ গড়ে তোলা সম্ভব।
                     </p>
                 </div>
-                <div class="intro-image">
-                    <div class="image-wrapper">
-                        <div class="image-placeholder">
+                <div class="relative">
+                    <div
+                        class="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                        <div
+                            class="aspect-[4/3] bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-600 flex items-center justify-center">
+                            <svg class="w-32 h-32 text-white/30" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z" />
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -33,31 +41,38 @@
     </section>
 
     <!-- Mission Section -->
-    <section class="mission-section py-6">
-        <div class="container">
-            <h2 class="section-title text-center">আমাদের লক্ষ্য</h2>
-            <div class="mission-grid">
-                <div class="mission-card" *ngFor="let mission of missions">
-                    <div class="mission-icon">
-                        <img [src]="mission.icon" [alt]="mission.title">
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">আমাদের লক্ষ্য</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+                    *ngFor="let mission of missions">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-6">
+                        <img [src]="mission.icon" [alt]="mission.title"
+                            class="w-8 h-8 object-contain filter brightness-0 invert">
                     </div>
-                    <h3>{{ mission.title }}</h3>
-                    <p>{{ mission.description }}</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">{{ mission.title }}</h3>
+                    <p class="text-gray-600 leading-relaxed">{{ mission.description }}</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Vision Section -->
-    <section class="vision-section py-6">
-        <div class="container">
-            <h2 class="section-title text-center">আমাদের উদ্দেশ্য</h2>
-            <div class="vision-content">
-                <div class="vision-item" *ngFor="let vision of visions">
-                    <div class="vision-number">{{ vision.number }}</div>
-                    <div class="vision-text">
-                        <h4>{{ vision.title }}</h4>
-                        <p>{{ vision.description }}</p>
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">আমাদের উদ্দেশ্য</h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="flex gap-6 items-start bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+                    *ngFor="let vision of visions">
+                    <div
+                        class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        {{ vision.number }}
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">{{ vision.title }}</h4>
+                        <p class="text-gray-600 leading-relaxed">{{ vision.description }}</p>
                     </div>
                 </div>
             </div>
@@ -65,37 +80,42 @@
     </section>
 
     <!-- Features Section -->
-    <section class="features-section py-6">
-        <div class="container">
-            <h2 class="section-title text-center">আমাদের বৈশিষ্ট্য</h2>
-            <div class="features-grid">
-                <div class="feature-card" *ngFor="let feature of features">
-                    <div class="feature-icon">
-                        <img [src]="feature.icon" [alt]="feature.title">
+    <section class="py-16 bg-gradient-to-br from-emerald-50 to-teal-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">আমাদের বৈশিষ্ট্য</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                    *ngFor="let feature of features">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <img [src]="feature.icon" [alt]="feature.title"
+                            class="w-8 h-8 object-contain filter brightness-0 invert">
                     </div>
-                    <h3>{{ feature.title }}</h3>
-                    <p>{{ feature.description }}</p>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">{{ feature.title }}</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">{{ feature.description }}</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section class="team-section py-6">
-        <div class="container">
-            <h2 class="section-title text-center">আমাদের উপদেষ্টা পরিষদ</h2>
-            <p class="section-subtitle text-center">
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">আমাদের উপদেষ্টা পরিষদ</h2>
+            <p class="text-center text-gray-600 mb-12 text-lg">
                 আমাদের সংস্থা পরিচালনায় রয়েছেন অভিজ্ঞ ও জ্ঞানী ব্যক্তিবর্গ
             </p>
-            <div class="team-grid">
-                <div class="team-card" *ngFor="let member of teamMembers">
-                    <div class="team-image">
-                        <img [src]="member.image" [alt]="member.name">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    *ngFor="let member of teamMembers">
+                    <div
+                        class="aspect-square bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center">
+                        <img [src]="member.image" [alt]="member.name" class="w-full h-full object-cover">
                     </div>
-                    <div class="team-info">
-                        <h3>{{ member.name }}</h3>
-                        <p class="team-role">{{ member.role }}</p>
-                        <p class="team-description">{{ member.description }}</p>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">{{ member.name }}</h3>
+                        <p class="text-emerald-600 font-semibold mb-3">{{ member.role }}</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">{{ member.description }}</p>
                     </div>
                 </div>
             </div>
@@ -103,14 +123,18 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section py-6">
-        <div class="container">
-            <div class="cta-content">
-                <h2>আমাদের সাথে যুক্ত হন</h2>
-                <p>আপনিও আমাদের এই মহৎ কাজে অংশীদার হতে পারেন</p>
-                <div class="cta-buttons">
-                    <a href="donate" class="btn btn-primary">দান করুন</a>
-                    <a href="get-involved" class="btn btn-outline">স্বেচ্ছাসেবক হন</a>
+    <section class="py-20 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">আমাদের সাথে যুক্ত হন</h2>
+                <p class="text-xl mb-8 text-white/90">আপনিও আমাদের এই মহৎ কাজে অংশীদার হতে পারেন</p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="donate"
+                        class="px-8 py-4 bg-white text-emerald-600 rounded-lg font-bold hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl">দান
+                        করুন</a>
+                    <a href="get-involved"
+                        class="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-emerald-600 transition-all duration-300">স্বেচ্ছাসেবক
+                        হন</a>
                 </div>
             </div>
         </div>

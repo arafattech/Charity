@@ -1,15 +1,29 @@
-<section class="hero" id="home">
-    <div class="hero-overlay"></div>
-    <div class="container">
-        <div class="hero-content">
-            <div class="hero-text fade-in">
-                <h1 class="hero-title">উম্মাহর স্বার্থে, সুন্নাহর সাথে</h1>
-                <p class="hero-subtitle">
+<section
+    class="relative flex items-center min-h-[90vh] py-16 overflow-hidden bg-gradient-to-br from-primary-green-lighter via-white to-accent-gold-light hero"
+    id="home">
+    <!-- Background Pattern -->
+    <div
+        class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_20%_50%,rgba(45,122,62,0.1)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(212,165,116,0.1)_0%,transparent_50%)]">
+    </div>
+
+    <!-- Hero Overlay -->
+    <div
+        class="absolute inset-0 opacity-50 pointer-events-none hero-overlay bg-[url('/assets/hero/herobg.png')] bg-center bg-cover bg-no-repeat">
+    </div>
+
+    <div class="container relative z-10 mx-auto px-4">
+        <div class="grid items-center grid-cols-1 gap-16 md:grid-cols-2 hero-content">
+            <div class="max-w-full text-center hero-text animate-fade-in md:text-left md:max-w-[600px]">
+                <h1
+                    class="mb-6 text-4xl font-extrabold leading-tight text-transparent md:text-5xl lg:text-6xl bg-gradient-to-br from-primary-green-dark to-primary-green bg-clip-text hero-title">
+                    উম্মাহর স্বার্থে, সুন্নাহর সাথে</h1>
+                <p class="mb-10 text-base leading-relaxed text-gray-600 md:text-lg lg:text-xl hero-subtitle">
                     ইসলামিক শিক্ষা, দাওয়াহ এবং সামাজিক কল্যাণে নিবেদিত একটি সংস্থা। আমরা কুরআন ও সুন্নাহর আলোকে সমাজে
                     ইতিবাচক পরিবর্তন আনতে প্রতিশ্রুতিবদ্ধ।
                 </p>
-                <div class="hero-buttons">
-                    <a href="donate" class="btn btn-primary">
+                <div class="flex flex-wrap justify-center gap-4 md:justify-start hero-buttons">
+                    <a href="donate"
+                        class="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-white transition-all rounded-lg shadow-md bg-gradient-to-br from-primary-green-dark to-primary-green hover:from-blue-800 hover:to-blue-700 hover:-translate-y-0.5 hover:shadow-lg btn btn-primary">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <path
@@ -18,18 +32,30 @@
                         </svg>
                         দান করুন
                     </a>
-                    <a href="projects" class="btn btn-outline">
+                    <a href="projects"
+                        class="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-gray-800 transition-all bg-transparent border-2 border-gray-300 rounded-lg hover:border-primary-green hover:text-primary-green hover:bg-gray-50 btn btn-outline">
                         আমাদের প্রকল্পসমূহ
                     </a>
                 </div>
             </div>
 
-            <div class="hero-image slide-in-right">
-                <div class="image-card">
-                    <img src="assets/hero/heroImage.png" alt="সংস্থার কার্যক্রমের চিত্র" loading="eager" />
-                    <div class="image-badge">
-                        <span class="badge-title">১৫+</span>
-                        <span class="badge-text">চলমান প্রোগ্রাম</span>
+            <div class="flex items-center justify-center hero-image slide-in-right">
+                <div
+                    class="relative w-full max-w-[500px] aspect-square rounded-2xl bg-gradient-to-br from-primary-green to-primary-green-light shadow-2xl overflow-hidden transition-transform duration-500 hover:scale-105 hover:rotate-2 image-card group">
+                    <img src="assets/hero/heroImage.png" alt="সংস্থার কার্যক্রমের চিত্র" loading="eager"
+                        class="relative z-10 block object-cover w-full h-full" />
+
+                    <!-- Shimmer Effect -->
+                    <div
+                        class="absolute top-0 left-0 w-[200%] h-[200%] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-transparent via-white/10 to-transparent rotate-45 animate-[shimmer_3s_infinite]">
+                    </div>
+
+                    <div
+                        class="absolute z-20 flex flex-col gap-1 p-4 rounded-lg shadow-lg right-6 bottom-6 bg-white/85 backdrop-blur-sm image-badge lg:p-6">
+                        <span
+                            class="text-3xl font-extrabold leading-none badge-title text-primary-green-dark lg:text-4xl">১৫+</span>
+                        <span class="text-sm font-semibold whitespace-nowrap badge-text text-gray-800">চলমান
+                            প্রোগ্রাম</span>
                     </div>
                 </div>
             </div>

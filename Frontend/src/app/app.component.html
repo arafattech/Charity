@@ -1,5 +1,5 @@
 <app-header *ngIf="showHeaderFooter"></app-header>
-<main [class.admin-main]="!showHeaderFooter">
+<main class="min-h-screen" [ngClass]="{'p-0 m-0 overflow-hidden': !showHeaderFooter}">
   <router-outlet />
 </main>
 <app-footer *ngIf="showHeaderFooter"></app-footer>

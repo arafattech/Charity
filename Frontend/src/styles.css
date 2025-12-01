@@ -25,11 +25,10 @@ body {
 /* CSS Custom Properties - Color Palette */
 :root {
   /* Primary Colors - Green Theme */
-  --primary-green: #2d7a3e;
-  --primary-green-dark: #1e5a2d;
-  --primary-green-light: #3a9950;
+  --primary-green: #3b82f6;
+  --primary-green-dark: #1a4ed8;
+  --primary-green-light: #1a4ed8;
   --primary-green-lighter: #e8f5eb;
-  
   /* Accent Colors - Gold/Yellow */
   --accent-gold: #d4a574;
   --accent-gold-dark: #b8915f;
@@ -173,12 +172,13 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: var(--primary-green);
+  background: linear-gradient(135deg, #1a4ed8, #3b82f6);
   color: var(--text-white);
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-green-dark);
+  background: linear-gradient(135deg, #0a2a88, #1e40af);
+  color: var(--text-white);
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }

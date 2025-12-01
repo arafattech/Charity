@@ -35,7 +35,7 @@
   .logo-text {
     font-size: 1.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--primary-green), var(--primary-green-light));
+    background: linear-gradient(135deg, #1a4ed8, #3b82f6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -77,12 +77,12 @@
         left: 0;
         width: 0;
         height: 2px;
-        background: var(--primary-green);
+        background: #1e40af;
         transition: width var(--transition-base);
       }
 
       &:hover {
-        color: var(--primary-green);
+        color: #1a48dfea;
 
         &::after {
           width: 100%;
@@ -90,7 +90,7 @@
       }
 
       &.active-link {
-        color: var(--primary-green);
+        color:1e40af ;
         font-weight: 600;
 
         &::after {
@@ -123,8 +123,8 @@
             transition: all 0.2s;
 
             &.active {
-                background-color: #a7d7c5; // Light green from screenshot
-                color: #1a4d2e;
+                background-color: #2966d8dc; // Light green from screenshot
+                color: #ffffff;
             }
 
             &:hover:not(.active) {

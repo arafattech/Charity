@@ -4,7 +4,7 @@
             <!-- Logo -->
             <div class="logo">
                 <a routerLink="/">
-                    <span class="logo-text">আস-সুন্নাহ ফাউন্ডেশন</span>
+                    <span class="logo-text">Donate App</span>
                 </a>
             </div>
 
@@ -14,11 +14,10 @@
                 <li><a routerLink="/about" routerLinkActive="active-link" (click)="closeMenu()">আমাদের সম্পর্কে</a></li>
                 <li><a routerLink="/get-involved" routerLinkActive="active-link" (click)="closeMenu()">আমাদের সাথে যুক্ত
                         হোন</a></li>
-                <li><a href="#projects" (click)="closeMenu()">প্রকল্পসমূহ</a></li>
+                <li><a routerLink="/projects" routerLinkActive="active-link" (click)="closeMenu()">প্রকল্পসমূহ</a></li>
                 <li><a routerLink="/donate" routerLinkActive="active-link" (click)="closeMenu()">দান করুন</a></li>
                 <li><a routerLink="/gallery" routerLinkActive="active-link" (click)="closeMenu()">গ্যালারি</a></li>
                 <li><a routerLink="/blog" routerLinkActive="active-link" (click)="closeMenu()">ব্লগ</a></li>
-                <li><a routerLink="/notice" routerLinkActive="active-link" (click)="closeMenu()">নোটিশ</a></li>
                 <li><a routerLink="/contact" routerLinkActive="active-link" (click)="closeMenu()">যোগাযোগ</a></li>
             </ul>
 
@@ -28,9 +27,8 @@
                     <button class="active">বাং</button>
                     <button>EN</button>
                 </div>
-
                 <a routerLink="/auth/signin" class="user-btn">
-                    <i class="far fa-user"></i>
+                    <i class="fas fa-user"></i>
                 </a>
 
                 <div class="nav-cta">

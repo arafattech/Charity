@@ -1,0 +1,175 @@
+<div class="get-involved-page">
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title fade-in">আমাদের সাথে যুক্ত হোন</h1>
+            <p class="page-subtitle fade-in">আপনিও আমাদের এই মহৎ কাজে অংশীদার হতে পারেন</p>
+        </div>
+    </section>
+
+    <!-- Regular Donor Section -->
+    <section class="donor-section py-6">
+        <div class="container">
+            <div class="section-content">
+                <div class="section-info">
+                    <div class="icon-wrapper">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3206/3206743.png" alt="নিয়মিত দাতার আইকন"
+                            loading="lazy" />
+                    </div>
+                    <h2>নিয়মিত দাতা সদস্য</h2>
+                    <p>
+                        নিয়মিত দাতা সদস্য হয়ে আপনি প্রতি মাসে একটি নির্দিষ্ট পরিমাণ অর্থ দান করতে পারেন। এটি আমাদের
+                        দীর্ঘমেয়াদী প্রকল্পগুলো পরিচালনা করতে সাহায্য করে।
+                    </p>
+                    <ul class="benefits-list">
+                        <li>মাসিক ডোনেশন রিপোর্ট পাবেন</li>
+                        <li>বিশেষ ইভেন্টে অগ্রাধিকার</li>
+                        <li>ট্যাক্স সার্টিফিকেট প্রদান</li>
+                        <li>নিয়মিত আপডেট ও নিউজলেটার</li>
+                    </ul>
+                    <button class="btn btn-primary">নিয়মিত দাতা হন</button>
+                </div>
+                <div class="section-image">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
+                            alt="নিয়মিত দাতাদের ছবি" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lifetime Donor Section -->
+    <section class="lifetime-donor-section py-6">
+        <div class="container">
+            <div class="section-content reverse">
+                <div class="section-image">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80"
+                            alt="আজীবন দাতাদের ছবি" loading="lazy" />
+                    </div>
+                </div>
+                <div class="section-info">
+                    <div class="icon-wrapper">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="আজীবন দাতার আইকন"
+                            loading="lazy" />
+                    </div>
+                    <h2>আজীবন দাতা সদস্য</h2>
+                    <p>
+                        একবার একটি বড় অঙ্কের দান করে আজীবন দাতা সদস্য হতে পারেন। এই অর্থ আমাদের স্থায়ী তহবিলে যুক্ত
+                        হবে এবং দীর্ঘমেয়াদী প্রকল্পে ব্যবহৃত হবে।
+                    </p>
+                    <ul class="benefits-list">
+                        <li>আজীবন সদস্যপদ সার্টিফিকেট</li>
+                        <li>বার্ষিক রিপোর্ট ও আপডেট</li>
+                        <li>বিশেষ স্বীকৃতি ও সম্মাননা</li>
+                        <li>প্রকল্প পরিদর্শনের সুযোগ</li>
+                    </ul>
+                    <button class="btn btn-primary">আজীবন সদস্য হন</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Section -->
+    <section class="volunteer-section py-6">
+        <div class="container">
+            <div class="section-content">
+                <div class="section-info">
+                    <div class="icon-wrapper">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3448/3448610.png" alt="স্বেচ্ছাসেবকের আইকন"
+                            loading="lazy" />
+                    </div>
+                    <h2>স্বেচ্ছাসেবক</h2>
+                    <p>
+                        আপনার সময়, দক্ষতা এবং শ্রম দিয়ে আমাদের সাথে কাজ করুন। স্বেচ্ছাসেবক হিসেবে আপনি বিভিন্ন
+                        প্রকল্পে অংশগ্রহণ করতে পারবেন এবং সমাজসেবায় অবদান রাখতে পারবেন।
+                    </p>
+                    <div class="volunteer-areas">
+                        <h3>যেসব ক্ষেত্রে কাজ করতে পারবেন:</h3>
+                        <div class="areas-grid">
+                            <div class="area-item" *ngFor="let area of volunteerAreas">
+                                <div class="area-icon">
+                                    <img [src]="area.icon" [alt]="area.name" loading="lazy" />
+                                </div>
+                                <span>{{ area.name }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">স্বেচ্ছাসেবক হিসেবে যুক্ত হন</button>
+                </div>
+                <div class="section-image">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80"
+                            alt="স্বেচ্ছাসেবকদের দল" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Section -->
+    <section class="career-section py-6">
+        <div class="container">
+            <div class="section-content reverse">
+                <div class="section-image">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
+                            alt="ক্যারিয়ার আলোচনা" loading="lazy" />
+                    </div>
+                </div>
+                <div class="section-info">
+                    <div class="icon-wrapper">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135673.png" alt="ক্যারিয়ার আইকন"
+                            loading="lazy" />
+                    </div>
+                    <h2>ক্যারিয়ার</h2>
+                    <p>
+                        আস-সুন্নাহ ফাউন্ডেশনে আপনার ক্যারিয়ার গড়ুন। আমরা নিয়মিত বিভিন্ন পদে দক্ষ ও প্রতিশ্রুতিবদ্ধ
+                        ব্যক্তিদের নিয়োগ দিয়ে থাকি।
+                    </p>
+                    <div class="career-info">
+                        <h3>বর্তমানে খালি পদসমূহ:</h3>
+                        <ul class="job-list">
+                            <li *ngFor="let job of currentJobs">
+                                <div class="job-title">{{ job.title }}</div>
+                                <div class="job-details">{{ job.location }} • {{ job.type }}</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary">সকল পদ দেখুন</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta py-6">
+        <div class="container">
+            <div class="cta-content">
+                <h2>আরও জানতে চান?</h2>
+                <p>আমাদের সাথে যোগাযোগ করুন এবং আপনার প্রশ্ন জিজ্ঞাসা করুন</p>
+                <div class="contact-methods">
+                    <a href="tel:+8801XXXXXXXXX" class="contact-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                        <span>+৮৮০ ১XXX-XXXXXX</span>
+                    </a>
+                    <a href="mailto:info@assunnah.org" class="contact-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>infoassunnah.org</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

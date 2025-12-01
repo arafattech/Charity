@@ -1,0 +1,119 @@
+<div class="about-page">
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title fade-in">আমাদের সম্পর্কে</h1>
+            <p class="page-subtitle fade-in">উম্মাহর স্বার্থে, সুন্নাহর সাথে</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro-section py-6">
+        <div class="container">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h2 class="section-title">আস-সুন্নাহ ফাউন্ডেশন</h2>
+                    <p>
+                        আস-সুন্নাহ ফাউন্ডেশন একটি ইসলামিক দাওয়াহ ও সমাজসেবামূলক সংস্থা। আমরা কুরআন ও সুন্নাহর আলোকে
+                        সমাজে ইতিবাচক পরিবর্তন আনতে এবং মানুষকে সঠিক ইসলামের পথে পরিচালিত করতে প্রতিশ্রুতিবদ্ধ।
+                    </p>
+                    <p>
+                        আমাদের লক্ষ্য হলো ইসলামের সঠিক শিক্ষা প্রচার করা, দরিদ্র ও অসহায় মানুষদের সাহায্য করা এবং সমাজে
+                        ন্যায়বিচার ও শান্তি প্রতিষ্ঠা করা। আমরা বিশ্বাস করি যে, কুরআন ও সুন্নাহর অনুসরণের মাধ্যমেই একটি
+                        সুন্দর ও সমৃদ্ধ সমাজ গড়ে তোলা সম্ভব।
+                    </p>
+                </div>
+                <div class="intro-image">
+                    <div class="image-wrapper">
+                        <div class="image-placeholder">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section py-6">
+        <div class="container">
+            <h2 class="section-title text-center">আমাদের লক্ষ্য</h2>
+            <div class="mission-grid">
+                <div class="mission-card" *ngFor="let mission of missions">
+                    <div class="mission-icon">
+                        <img [src]="mission.icon" [alt]="mission.title">
+                    </div>
+                    <h3>{{ mission.title }}</h3>
+                    <p>{{ mission.description }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision-section py-6">
+        <div class="container">
+            <h2 class="section-title text-center">আমাদের উদ্দেশ্য</h2>
+            <div class="vision-content">
+                <div class="vision-item" *ngFor="let vision of visions">
+                    <div class="vision-number">{{ vision.number }}</div>
+                    <div class="vision-text">
+                        <h4>{{ vision.title }}</h4>
+                        <p>{{ vision.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-6">
+        <div class="container">
+            <h2 class="section-title text-center">আমাদের বৈশিষ্ট্য</h2>
+            <div class="features-grid">
+                <div class="feature-card" *ngFor="let feature of features">
+                    <div class="feature-icon">
+                        <img [src]="feature.icon" [alt]="feature.title">
+                    </div>
+                    <h3>{{ feature.title }}</h3>
+                    <p>{{ feature.description }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section py-6">
+        <div class="container">
+            <h2 class="section-title text-center">আমাদের উপদেষ্টা পরিষদ</h2>
+            <p class="section-subtitle text-center">
+                আমাদের সংস্থা পরিচালনায় রয়েছেন অভিজ্ঞ ও জ্ঞানী ব্যক্তিবর্গ
+            </p>
+            <div class="team-grid">
+                <div class="team-card" *ngFor="let member of teamMembers">
+                    <div class="team-image">
+                        <img [src]="member.image" [alt]="member.name">
+                    </div>
+                    <div class="team-info">
+                        <h3>{{ member.name }}</h3>
+                        <p class="team-role">{{ member.role }}</p>
+                        <p class="team-description">{{ member.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-6">
+        <div class="container">
+            <div class="cta-content">
+                <h2>আমাদের সাথে যুক্ত হন</h2>
+                <p>আপনিও আমাদের এই মহৎ কাজে অংশীদার হতে পারেন</p>
+                <div class="cta-buttons">
+                    <a href="donate" class="btn btn-primary">দান করুন</a>
+                    <a href="get-involved" class="btn btn-outline">স্বেচ্ছাসেবক হন</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

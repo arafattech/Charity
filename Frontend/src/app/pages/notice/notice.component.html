@@ -1,0 +1,46 @@
+<div class="notice-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>নোটিশ</h1>
+            <p>আমাদের সর্বশেষ ঘোষণা এবং আপডেট</p>
+        </div>
+    </section>
+
+    <!-- Notice Content -->
+    <section class="notice-content">
+        <div class="container">
+            <div class="notice-grid" *ngIf="notices.length > 0">
+                <div class="notice-card" *ngFor="let notice of notices">
+                    <div class="notice-header">
+                        <div class="notice-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div class="notice-meta">
+                            <h3>{{ notice.title }}</h3>
+                            <div class="notice-date">
+                                <i class="far fa-calendar"></i>
+                                <span>{{ notice.date }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notice-body">
+                        <p>{{ notice.description }}</p>
+                        <a href="#" class="read-more">
+                            বিস্তারিত পড়ুন <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" *ngIf="notices.length === 0">
+                <div class="empty-icon">
+                    <i class="far fa-bell-slash"></i>
+                </div>
+                <h3>কোনো নোটিশ পাওয়া যায়নি।</h3>
+                <p>বর্তমানে কোনো নোটিশ নেই। পরে আবার চেক করুন।</p>
+            </div>
+        </div>
+    </section>
+</div>

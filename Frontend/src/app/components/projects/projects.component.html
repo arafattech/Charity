@@ -7,44 +7,79 @@
             </p>
         </div>
 
-        <div class="projects-grid">
-            <div class="project-card" *ngFor="let project of projects">
-                <div class="project-image">
-                    <div class="image-overlay"></div>
-                    <div class="project-icon" [innerHTML]="project.icon"></div>
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">{{ project.title }}</h3>
-                    <p class="project-description">{{ project.description }}</p>
-                    <div class="project-meta">
-                        <div class="meta-item">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                            <span>{{ project.beneficiaries }}</span>
-                        </div>
-                        <div class="meta-item">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            <span>{{ project.location }}</span>
-                        </div>
+        <div class="carousel-wrapper">
+            <!-- Previous Button -->
+            <button class="carousel-btn prev-btn" (click)="prevSlide()" aria-label="Previous">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6"></path>
+                </svg>
+            </button>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <div class="project-card" *ngFor="let project of projects">
+                    <div class="project-image">
+                        <img [src]="project.image" [alt]="project.title + ' এর ছবি'" loading="lazy" />
+                        <div class="image-overlay"></div>
                     </div>
-                    <a href="#donate" class="project-link">
-                        বিস্তারিত দেখুন
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
-                    </a>
+                    <div class="project-content">
+                        <h3 class="project-title">{{ project.title }}</h3>
+                        <p class="project-description">{{ project.description }}</p>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span>{{ project.beneficiaries }}</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>{{ project.location }}</span>
+                            </div>
+                        </div>
+                        <a href="#donate" class="project-link">
+                            বিস্তারিত দেখুন
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
+
+            <!-- Next Button -->
+            <button class="carousel-btn next-btn" (click)="nextSlide()" aria-label="Next">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Slide Indicators -->
+        <div class="carousel-indicators">
+            <button *ngFor="let indicator of slideIndicators; let i = index" class="indicator"
+                [class.active]="currentSlide === i * 3" (click)="goToSlide(i)"
+                [attr.aria-label]="'Go to slide ' + (i + 1)">
+            </button>
+        </div>
+
+        <!-- View All Projects Button -->
+        <div class="view-all-wrapper">
+            <button class="view-all-btn" (click)="navigateToProjects()">
+                কার্যক্রমসমূহ
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button>
         </div>
     </div>
 </section>

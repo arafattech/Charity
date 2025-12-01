@@ -1,9 +1,5 @@
-<app-header></app-header>
-<main>
-  <app-hero></app-hero>
-  <app-stats></app-stats>
-  <app-projects></app-projects>
+<app-header *ngIf="showHeaderFooter"></app-header>
+<main [class.admin-main]="!showHeaderFooter">
+  <router-outlet />
 </main>
-<app-footer></app-footer>
-
-<router-outlet />
+<app-footer *ngIf="showHeaderFooter"></app-footer>

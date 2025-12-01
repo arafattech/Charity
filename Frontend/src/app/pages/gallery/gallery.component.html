@@ -1,0 +1,75 @@
+<div class="gallery-page">
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title fade-in">গ্যালারি</h1>
+            <p class="page-subtitle fade-in">আমাদের কার্যক্রমের কিছু বিশেষ মুহূর্ত</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section py-6">
+        <div class="container">
+            <!-- Filter Tabs -->
+            <div class="filter-tabs fade-up">
+                <button class="filter-btn" [class.active]="activeFilter === 'all'" (click)="setFilter('all')">
+                    সব
+                </button>
+                <button class="filter-btn" [class.active]="activeFilter === 'image'" (click)="setFilter('image')">
+                    ছবি
+                </button>
+                <button class="filter-btn" [class.active]="activeFilter === 'video'" (click)="setFilter('video')">
+                    ভিডিও
+                </button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <div class="gallery-item fade-up" *ngFor="let item of filteredItems; let i = index"
+                    [style.animation-delay]="i * 50 + 'ms'">
+                    <div class="item-content">
+                        <img [src]="item.thumbnail" [alt]="item.title">
+
+                        <!-- Video Overlay -->
+                        <div class="video-overlay" *ngIf="item.type === 'video'">
+                            <div class="play-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="none">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Hover Overlay -->
+                        <div class="hover-overlay">
+                            <div class="overlay-content">
+                                <span class="category">{{ item.category }}</span>
+                                <h3>{{ item.title }}</h3>
+                                <button class="view-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                    দেখুন
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more-container">
+                <button class="btn btn-outline" (click)="loadMore()">
+                    আরও দেখুন
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m6 9 6 6 6-6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+</div>

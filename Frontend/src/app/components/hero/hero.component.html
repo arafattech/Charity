@@ -16,10 +16,9 @@
             <div class="max-w-full text-center hero-text animate-fade-in md:text-left md:max-w-[600px]">
                 <h1
                     class="mb-6 text-4xl font-extrabold leading-tight text-transparent md:text-5xl lg:text-6xl bg-gradient-to-br from-primary-green-dark to-primary-green bg-clip-text hero-title">
-                    উম্মাহর স্বার্থে, সুন্নাহর সাথে</h1>
+                    {{ 'hero.title' | translate }}</h1>
                 <p class="mb-10 text-base leading-relaxed text-gray-600 md:text-lg lg:text-xl hero-subtitle">
-                    ইসলামিক শিক্ষা, দাওয়াহ এবং সামাজিক কল্যাণে নিবেদিত একটি সংস্থা। আমরা কুরআন ও সুন্নাহর আলোকে সমাজে
-                    ইতিবাচক পরিবর্তন আনতে প্রতিশ্রুতিবদ্ধ।
+                    {{ 'hero.subtitle' | translate }}
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 md:justify-start hero-buttons">
                     <a href="donate"
@@ -30,11 +29,11 @@
                                 d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
                             </path>
                         </svg>
-                        দান করুন
+                        {{ 'hero.donate' | translate }}
                     </a>
                     <a href="projects"
                         class="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-gray-800 transition-all bg-transparent border-2 border-gray-300 rounded-lg hover:border-primary-green hover:text-primary-green hover:bg-gray-50 btn btn-outline">
-                        আমাদের প্রকল্পসমূহ
+                        {{ 'hero.projects' | translate }}
                     </a>
                 </div>
             </div>
@@ -53,9 +52,9 @@
                     <div
                         class="absolute z-20 flex flex-col gap-1 p-4 rounded-lg shadow-lg right-6 bottom-6 bg-white/85 backdrop-blur-sm image-badge lg:p-6">
                         <span
-                            class="text-3xl font-extrabold leading-none badge-title text-primary-green-dark lg:text-4xl">১৫+</span>
-                        <span class="text-sm font-semibold whitespace-nowrap badge-text text-gray-800">চলমান
-                            প্রোগ্রাম</span>
+                            class="text-3xl font-extrabold leading-none badge-title text-primary-green-dark lg:text-4xl">15+</span>
+                        <span class="text-sm font-semibold whitespace-nowrap badge-text text-gray-800">{{
+                            'hero.programs' | translate }}</span>
                     </div>
                 </div>
             </div>

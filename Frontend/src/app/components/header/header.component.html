@@ -50,10 +50,7 @@
 
             <!-- CTA Button & Actions -->
             <div class="hidden gap-4 nav-actions md:flex items-center">
-                <div class="flex overflow-hidden border border-gray-200 rounded-md lang-toggle">
-                    <button class="px-3 py-2 text-sm font-semibold text-white bg-blue-600 active">বাং</button>
-                    <button class="px-3 py-2 text-sm font-semibold text-gray-500 bg-white hover:bg-gray-50">EN</button>
-                </div>
+                <app-language-switcher></app-language-switcher>
                 <a routerLink="/auth/signin"
                     class="flex items-center justify-center w-10 h-10 text-xl text-green-900 transition-all bg-yellow-100 border border-yellow-200 rounded-lg cursor-pointer user-btn hover:bg-yellow-200">
                     <i class="fas fa-user"></i>

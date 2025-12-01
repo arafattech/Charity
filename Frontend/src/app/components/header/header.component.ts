@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { Localization } from '../../shared/localization';
 import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
 
 @Component({
@@ -12,6 +13,7 @@ import { LanguageSwitcherComponent } from '../language-switcher/language-switche
 })
 export class HeaderComponent {
   isMenuOpen = false;
+  L = Localization;
 
   constructor(public router: Router) {}
 

@@ -6,8 +6,8 @@
             <div class="shrink-0 logo">
                 <a routerLink="/" class="flex items-center gap-3 no-underline">
                     <span
-                        class="text-2xl font-bold text-transparent transition-transform bg-gradient-to-br from-primary-green-dark to-primary-green bg-clip-text logo-text hover:scale-105">Donate
-                        App</span>
+                        class="text-2xl font-bold text-transparent transition-transform bg-gradient-to-br from-primary-green-dark to-primary-green bg-clip-text logo-text hover:scale-105">{{
+                        L.LogoText }}</span>
                 </a>
             </div>
 
@@ -17,35 +17,35 @@
                 <li class="relative shrink-0"><a routerLink="/home"
                         routerLinkActive="text-primary-green-dark font-semibold after:w-full"
                         class="relative block py-2 text-sm font-medium text-gray-800 transition-colors md:inline-block hover:text-primary-green-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-green-dark after:transition-all hover:after:w-full"
-                        (click)="closeMenu()">হোম</a></li>
+                        (click)="closeMenu()">{{ L.NavHome }}</a></li>
                 <li class="relative shrink-0"><a routerLink="/about"
                         routerLinkActive="text-primary-green-dark font-semibold after:w-full"
                         class="relative block py-2 text-sm font-medium text-gray-800 transition-colors md:inline-block hover:text-primary-green-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-green-dark after:transition-all hover:after:w-full"
-                        (click)="closeMenu()">আমাদের সম্পর্কে</a></li>
+                        (click)="closeMenu()">{{ L.NavAbout }}</a></li>
                 <li class="relative shrink-0"><a routerLink="/get-involved"
                         routerLinkActive="text-primary-green-dark font-semibold after:w-full"
                         class="relative block py-2 text-sm font-medium text-gray-800 transition-colors md:inline-block hover:text-primary-green-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-green-dark after:transition-all hover:after:w-full"
-                        (click)="closeMenu()">আমাদের সাথে যুক্ত হোন</a></li>
+                        (click)="closeMenu()">{{ L.NavGetInvolved }}</a></li>
                 <li class="relative shrink-0"><a routerLink="/projects"
                         routerLinkActive="text-primary-green-dark font-semibold after:w-full"
                         class="relative block py-2 text-sm font-medium text-gray-800 transition-colors md:inline-block hover:text-primary-green-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-green-dark after:transition-all hover:after:w-full"
-                        (click)="closeMenu()">প্রকল্পসমূহ</a></li>
+                        (click)="closeMenu()">{{ L.NavProjects }}</a></li>
                 <li class="relative shrink-0"><a routerLink="/donate"
                         routerLinkActive="text-primary-green-dark font-semibold after:w-full"
                         class="relative block py-2 text-sm font-medium text-gray-800 transition-colors md:inline-block hover:text-primary-green-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-green-dark after:transition-all hover:after:w-full"
-                        (click)="closeMenu()">দান করুন</a></li>
+                        (click)="closeMenu()">{{ L.NavDonate }}</a></li>
                 <li class="relative shrink-0"><a routerLink="/gallery"
                         routerLinkActive="text-primary-green-dark font-semibold after:w-full"
                         class="relative block py-2 text-sm font-medium text-gray-800 transition-colors md:inline-block hover:text-primary-green-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-green-dark after:transition-all hover:after:w-full"
-                        (click)="closeMenu()">গ্যালারি</a></li>
+                        (click)="closeMenu()">{{ L.NavGallery }}</a></li>
                 <li class="relative shrink-0"><a routerLink="/blog"
                         routerLinkActive="text-primary-green-dark font-semibold after:w-full"
                         class="relative block py-2 text-sm font-medium text-gray-800 transition-colors md:inline-block hover:text-primary-green-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-green-dark after:transition-all hover:after:w-full"
-                        (click)="closeMenu()">ব্লগ</a></li>
+                        (click)="closeMenu()">{{ L.NavBlog }}</a></li>
                 <li class="relative shrink-0"><a routerLink="/contact"
                         routerLinkActive="text-primary-green-dark font-semibold after:w-full"
                         class="relative block py-2 text-sm font-medium text-gray-800 transition-colors md:inline-block hover:text-primary-green-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-green-dark after:transition-all hover:after:w-full"
-                        (click)="closeMenu()">যোগাযোগ</a></li>
+                        (click)="closeMenu()">{{ L.NavContact }}</a></li>
             </ul>
 
             <!-- CTA Button & Actions -->
@@ -58,8 +58,8 @@
 
                 <div class="shrink-0 nav-cta">
                     <a routerLink="/donate"
-                        class="px-5 py-2.5 text-base font-semibold text-white transition-all rounded-lg shadow-md bg-gradient-to-br from-primary-green-dark to-primary-green hover:from-blue-800 hover:to-blue-700 hover:-translate-y-0.5 hover:shadow-lg">দান
-                        করুন</a>
+                        class="px-5 py-2.5 text-base font-semibold text-white transition-all rounded-lg shadow-md bg-gradient-to-br from-primary-green-dark to-primary-green hover:from-blue-800 hover:to-blue-700 hover:-translate-y-0.5 hover:shadow-lg">{{
+                        L.NavDonate }}</a>
                 </div>
             </div>
 

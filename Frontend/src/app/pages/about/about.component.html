@@ -49,8 +49,7 @@
                     *ngFor="let mission of missions">
                     <div
                         class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-6">
-                        <img [src]="mission.icon" [alt]="mission.title"
-                            class="w-8 h-8 object-contain filter brightness-0 invert">
+                        <img [src]="mission.icon" [alt]="mission.title" class="w-10 h-10 object-contain">
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">{{ mission.title }}</h3>
                     <p class="text-gray-600 leading-relaxed">{{ mission.description }}</p>
@@ -88,8 +87,7 @@
                     *ngFor="let feature of features">
                     <div
                         class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <img [src]="feature.icon" [alt]="feature.title"
-                            class="w-8 h-8 object-contain filter brightness-0 invert">
+                        <img [src]="feature.icon" [alt]="feature.title" class="w-10 h-10 object-contain">
                     </div>
                     <h3 class="text-lg font-bold text-gray-800 mb-2">{{ feature.title }}</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">{{ feature.description }}</p>
@@ -105,17 +103,17 @@
             <p class="text-center text-gray-600 mb-12 text-lg">
                 আমাদের সংস্থা পরিচালনায় রয়েছেন অভিজ্ঞ ও জ্ঞানী ব্যক্তিবর্গ
             </p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
                     *ngFor="let member of teamMembers">
                     <div
                         class="aspect-square bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center">
                         <img [src]="member.image" [alt]="member.name" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-1">{{ member.name }}</h3>
-                        <p class="text-emerald-600 font-semibold mb-3">{{ member.role }}</p>
-                        <p class="text-gray-600 text-sm leading-relaxed">{{ member.description }}</p>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">{{ member.name }}</h3>
+                        <p class="text-emerald-600 text-sm font-semibold mb-2">{{ member.role }}</p>
+                        <p class="text-gray-600 text-xs leading-relaxed">{{ member.description }}</p>
                     </div>
                 </div>
             </div>

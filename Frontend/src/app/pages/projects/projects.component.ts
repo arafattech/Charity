@@ -15,42 +15,42 @@ export class ProjectsPageComponent {
       description: 'কুরআন ও হাদিসের শিক্ষা প্রদান এবং ইসলামিক জ্ঞান বিতরণের মাধ্যমে সমাজে সচেতনতা তৈরি করা।',
       beneficiaries: '৫,০০০+ শিক্ষার্থী',
       location: 'সারাদেশ',
-      image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80'
+      image: '/assets/projects/Education.png'
     },
     {
       title: 'দাওয়াহ ও প্রচার',
       description: 'ইসলামের সঠিক বার্তা মানুষের কাছে পৌঁছে দেওয়া এবং ভ্রান্ত ধারণা দূর করা।',
       beneficiaries: '১০,০০০+ মানুষ',
       location: '২৫+ জেলা',
-      image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80'
+      image: '/assets/projects/dawah.png'
     },
     {
       title: 'দারিদ্র্য বিমোচন',
       description: 'দরিদ্র ও অসহায় মানুষদের আর্থিক সহায়তা এবং কর্মসংস্থানের ব্যবস্থা করা।',
       beneficiaries: '৩,০০০+ পরিবার',
       location: 'গ্রামীণ এলাকা',
-      image: 'https://images.unsplash.com/photo-1441123694162-e54a981ceba3?auto=format&fit=crop&w=900&q=80'
+      image: '/assets/projects/poverty.png'
     },
     {
       title: 'স্বাস্থ্যসেবা কার্যক্রম',
       description: 'বিনামূল্যে চিকিৎসা সেবা এবং স্বাস্থ্য সচেতনতা কার্যক্রম পরিচালনা।',
       beneficiaries: '২,০০০+ রোগী',
       location: 'শহর ও গ্রাম',
-      image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80'
+      image: '/assets/projects/health.png'
     },
     {
       title: 'এতিম সহায়তা',
       description: 'এতিম শিশুদের শিক্ষা, খাদ্য এবং আশ্রয়ের ব্যবস্থা করা।',
       beneficiaries: '১,৫০০+ শিশু',
       location: 'বিভিন্ন জেলা',
-      image: 'https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=900&q=80'
+      image: '/assets/projects/orphan.png'
     },
     {
       title: 'পানি সরবরাহ প্রকল্প',
       description: 'বিশুদ্ধ পানির ব্যবস্থা করা এবং টিউবওয়েল স্থাপন করা।',
       beneficiaries: '৮০০+ পরিবার',
       location: 'প্রত্যন্ত অঞ্চল',
-      image: 'https://images.unsplash.com/photo-1508873535684-277a3cbcc4e2?auto=format&fit=crop&w=900&q=80'
+      image: '/assets/projects/water.png'
     },
     {
       title: 'শীতবস্ত্র বিতরণ',

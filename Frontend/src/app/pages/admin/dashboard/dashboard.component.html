@@ -1,109 +1,198 @@
-<div class="dashboard-container">
+<div class="flex h-screen bg-gray-100 font-sans">
     <!-- Sidebar -->
-    <aside class="sidebar" [class.collapsed]="isSidebarCollapsed">
-        <div class="sidebar-header">
-            <div class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
-                </svg>
-                <span *ngIf="!isSidebarCollapsed">Charity Admin</span>
+    <aside class="bg-slate-900 text-white transition-all duration-300 flex flex-col shadow-xl z-20"
+        [ngClass]="{'w-20': isSidebarCollapsed, 'w-64': !isSidebarCollapsed}">
+
+        <!-- Sidebar Header -->
+        <div class="h-16 flex items-center justify-between px-4 bg-slate-950 border-b border-slate-800">
+            <div class="flex items-center gap-3 overflow-hidden whitespace-nowrap" *ngIf="!isSidebarCollapsed">
+                <div class="w-8 h-8 rounded bg-emerald-500 flex items-center justify-center text-white font-bold">
+                    A
+                </div>
+                <span class="font-bold text-lg tracking-wide">Admin Panel</span>
             </div>
-            <button class="toggle-btn" (click)="toggleSidebar()">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+            <div class="w-8 h-8 rounded bg-emerald-500 flex items-center justify-center text-white font-bold mx-auto"
+                *ngIf="isSidebarCollapsed">
+                A
+            </div>
+            <button class="p-1.5 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-white transition-colors"
+                (click)="toggleSidebar()" *ngIf="!isSidebarCollapsed">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m15 18-6-6 6-6" />
                 </svg>
             </button>
         </div>
 
-        <nav class="sidebar-nav">
-            <a [routerLink]="['./']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-                class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" />
+        <!-- Sidebar Navigation -->
+        <nav class="flex-1 overflow-y-auto py-4 space-y-1">
+            <a [routerLink]="['./']" routerLinkActive="bg-emerald-600 text-white shadow-lg shadow-emerald-900/20"
+                [routerLinkActiveOptions]="{exact: true}"
+                class="flex items-center gap-3 px-4 py-3 mx-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all group relative overflow-hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="flex-shrink-0">
+                    <rect width="7" height="9" x="3" y="3" rx="1" />
+                    <rect width="7" height="5" x="14" y="3" rx="1" />
+                    <rect width="7" height="9" x="14" y="12" rx="1" />
+                    <rect width="7" height="5" x="3" y="16" rx="1" />
                 </svg>
-                <span *ngIf="!isSidebarCollapsed">Dashboard</span>
+                <span class="whitespace-nowrap font-medium" *ngIf="!isSidebarCollapsed">Dashboard</span>
+                <!-- Tooltip for collapsed state -->
+                <div *ngIf="isSidebarCollapsed"
+                    class="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-50 shadow-lg">
+                    Dashboard
+                </div>
             </a>
 
-            <a [routerLink]="['./donations']" routerLinkActive="active" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z" />
+            <a [routerLink]="['./donations']"
+                routerLinkActive="bg-emerald-600 text-white shadow-lg shadow-emerald-900/20"
+                class="flex items-center gap-3 px-4 py-3 mx-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all group relative">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="flex-shrink-0">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+                    <path d="M12 18V6" />
                 </svg>
-                <span *ngIf="!isSidebarCollapsed">Donations</span>
+                <span class="whitespace-nowrap font-medium" *ngIf="!isSidebarCollapsed">Donations</span>
+                <div *ngIf="isSidebarCollapsed"
+                    class="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-50 shadow-lg">
+                    Donations
+                </div>
             </a>
 
-            <a [routerLink]="['./projects']" routerLinkActive="active" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+            <a [routerLink]="['./projects']"
+                routerLinkActive="bg-emerald-600 text-white shadow-lg shadow-emerald-900/20"
+                class="flex items-center gap-3 px-4 py-3 mx-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all group relative">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="flex-shrink-0">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
                 </svg>
-                <span *ngIf="!isSidebarCollapsed">Projects</span>
+                <span class="whitespace-nowrap font-medium" *ngIf="!isSidebarCollapsed">Projects</span>
+                <div *ngIf="isSidebarCollapsed"
+                    class="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-50 shadow-lg">
+                    Projects
+                </div>
             </a>
 
-            <a [routerLink]="['./users']" routerLinkActive="active" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+            <a [routerLink]="['./users']" routerLinkActive="bg-emerald-600 text-white shadow-lg shadow-emerald-900/20"
+                class="flex items-center gap-3 px-4 py-3 mx-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all group relative">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="flex-shrink-0">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                 </svg>
-                <span *ngIf="!isSidebarCollapsed">Users</span>
+                <span class="whitespace-nowrap font-medium" *ngIf="!isSidebarCollapsed">Users</span>
+                <div *ngIf="isSidebarCollapsed"
+                    class="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-50 shadow-lg">
+                    Users
+                </div>
             </a>
 
-            <a [routerLink]="['./settings']" routerLinkActive="active" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <a [routerLink]="['./settings']"
+                routerLinkActive="bg-emerald-600 text-white shadow-lg shadow-emerald-900/20"
+                class="flex items-center gap-3 px-4 py-3 mx-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all group relative">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="flex-shrink-0">
                     <path
-                        d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
+                        d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+                    <circle cx="12" cy="12" r="3" />
                 </svg>
-                <span *ngIf="!isSidebarCollapsed">Settings</span>
+                <span class="whitespace-nowrap font-medium" *ngIf="!isSidebarCollapsed">Settings</span>
+                <div *ngIf="isSidebarCollapsed"
+                    class="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-50 shadow-lg">
+                    Settings
+                </div>
             </a>
         </nav>
 
-        <div class="sidebar-footer">
-            <button class="logout-btn" (click)="logout()">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" />
+        <!-- Sidebar Footer -->
+        <div class="p-4 border-t border-slate-800">
+            <button (click)="logout()"
+                class="flex items-center gap-3 w-full px-4 py-3 rounded-lg text-slate-400 hover:bg-red-500/10 hover:text-red-500 transition-all group relative">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="flex-shrink-0">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                    <polyline points="16 17 21 12 16 7" />
+                    <line x1="21" x2="9" y1="12" y2="12" />
                 </svg>
-                <span *ngIf="!isSidebarCollapsed">Logout</span>
+                <span class="whitespace-nowrap font-medium" *ngIf="!isSidebarCollapsed">Logout</span>
+                <div *ngIf="isSidebarCollapsed"
+                    class="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-50 shadow-lg">
+                    Logout
+                </div>
+            </button>
+
+            <!-- Collapse Button (Bottom) for when expanded -->
+            <button *ngIf="!isSidebarCollapsed" (click)="toggleSidebar()"
+                class="mt-4 flex items-center justify-center w-full py-2 text-slate-500 hover:text-slate-300 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m11 17-5-5 5-5" />
+                    <path d="m18 17-5-5 5-5" />
+                </svg>
             </button>
         </div>
     </aside>
 
     <!-- Main Content -->
-    <main class="main-content">
-        <!-- Top Bar -->
-        <header class="top-bar">
-            <div class="page-title">
-                <h1>{{ currentPageTitle }}</h1>
-                <p>{{ currentPageSubtitle }}</p>
-            </div>
-            <div class="user-section">
-                <div class="notifications">
-                    <button class="icon-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" />
-                        </svg>
-                        <span class="badge">3</span>
-                    </button>
+    <main class="flex-1 flex flex-col overflow-hidden relative">
+        <!-- Top Header -->
+        <header class="h-16 bg-white shadow-sm flex items-center justify-between px-6 z-10">
+            <div class="flex items-center gap-4">
+                <button (click)="toggleSidebar()" *ngIf="isSidebarCollapsed"
+                    class="p-2 rounded-lg hover:bg-gray-100 text-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" x2="21" y1="6" y2="6" />
+                        <line x1="3" x2="21" y1="12" y2="12" />
+                        <line x1="3" x2="21" y1="18" y2="18" />
+                    </svg>
+                </button>
+                <div>
+                    <h1 class="text-xl font-bold text-gray-800">{{ currentPageTitle }}</h1>
+                    <p class="text-sm text-gray-500 hidden md:block">{{ currentPageSubtitle }}</p>
                 </div>
-                <div class="user-info">
-                    <div class="user-avatar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
-                        </svg>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <!-- Notifications -->
+                <button class="relative p-2 rounded-full hover:bg-gray-100 text-gray-500 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                    </svg>
+                    <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full border border-white"></span>
+                </button>
+
+                <!-- User Profile -->
+                <div class="flex items-center gap-3 pl-6 border-l border-gray-200">
+                    <div class="text-right hidden md:block">
+                        <p class="text-sm font-semibold text-gray-800">{{ adminEmail }}</p>
+                        <p class="text-xs text-emerald-600 font-medium">Administrator</p>
                     </div>
-                    <div class="user-details">
-                        <span class="user-name">{{ adminEmail }}</span>
-                        <span class="user-role">Administrator</span>
+                    <div
+                        class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold border-2 border-white shadow-sm">
+                        {{ adminEmail.charAt(0).toUpperCase() }}
                     </div>
                 </div>
             </div>
         </header>
 
-        <!-- Page Content -->
-        <div class="page-content">
-            <router-outlet></router-outlet>
+        <!-- Scrollable Content Area -->
+        <div class="flex-1 overflow-auto p-6 bg-gray-50">
+            <div class="max-w-7xl mx-auto">
+                <router-outlet></router-outlet>
+            </div>
         </div>
     </main>
 </div>

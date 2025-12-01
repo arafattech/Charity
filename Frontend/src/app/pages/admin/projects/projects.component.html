@@ -1,4 +1,30 @@
-<div class="page-container">
-    <h2>Projects Management</h2>
-    <p>Manage all charity projects from here.</p>
+<div class="space-y-6">
+    <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 flex justify-between items-center">
+        <div>
+            <h2 class="text-2xl font-bold text-gray-800 mb-1">Projects Management</h2>
+            <p class="text-gray-600">Manage all charity projects from here.</p>
+        </div>
+        <button
+            class="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" x2="12" y1="5" y2="19" />
+                <line x1="5" x2="19" y1="12" y2="12" />
+            </svg>
+            Add New Project
+        </button>
+    </div>
+
+    <!-- Placeholder for projects list/grid -->
+    <div class="bg-white rounded-xl shadow-sm p-12 border border-gray-100 text-center">
+        <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+            </svg>
+        </div>
+        <h3 class="text-lg font-medium text-gray-900">No projects yet</h3>
+        <p class="text-gray-500 mt-1">Get started by creating your first project.</p>
+    </div>
 </div>
